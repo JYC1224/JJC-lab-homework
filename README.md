@@ -16,7 +16,7 @@
 
 ## 步驟 2：安裝virtual box與建立VM
 
-###安裝virtual
+### 安裝virtual box
 
 將SUSE安裝在VM之前我們必須在實體機器上創建一台VM
 
@@ -44,7 +44,7 @@
 
 即可正式進入virtual box的介面
 
-###建立VM
+### 建立VM
 
 點擊新增(N)
 
@@ -60,7 +60,7 @@
 
 如此一來VM即設置完成
 
-###安裝SUSE
+### 安裝SUSE
 
 接下來要將SUSE系統裝入虛擬機內
 
