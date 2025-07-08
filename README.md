@@ -58,7 +58,13 @@
 
 接下來要將SUSE系統裝入虛擬機內
 
+在虛擬機上點擊設定並進入存儲裝置 點擊控制器:IDE 點擊空的
 
+並在右側的光碟機choose a disk file
+
+找出安裝的SUSE檔
+
+![如圖](image/VB10.jpg)
 
 - 將映像掛載為 DVD 或寫入 USB 後重開機。
 - 選擇 **Installation** 選項進入安裝流程。
