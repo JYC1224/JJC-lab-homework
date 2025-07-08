@@ -36,6 +36,10 @@
 
 ![如圖](image/VB4.jpg)
 
+接下來兩步皆點擊是
+
+![如圖](image/VB5.jpg)
+
 - 將映像掛載為 DVD 或寫入 USB 後重開機。
 - 選擇 **Installation** 選項進入安裝流程。
 - 安裝過程中若出現 "Validation Check Failed" 提示，選擇 **Yes**（可能需多次）。
