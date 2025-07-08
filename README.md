@@ -94,6 +94,8 @@
 
 ![如圖](image/SU8.jpg)
 
+將sda1-sda4全數刪除
+
 ![如圖](image/SU9.jpg)
 
 ![如圖](image/SU10.jpg)
