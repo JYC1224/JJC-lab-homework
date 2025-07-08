@@ -40,6 +40,13 @@
 
 ![如圖](image/VB5.jpg)
 
+即可正式進入virtual box的介面
+
+點擊新增(N)
+
+![如圖](image/VB6.jpg)
+
+
 - 將映像掛載為 DVD 或寫入 USB 後重開機。
 - 選擇 **Installation** 選項進入安裝流程。
 - 安裝過程中若出現 "Validation Check Failed" 提示，選擇 **Yes**（可能需多次）。
