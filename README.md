@@ -70,6 +70,50 @@
 
 接下來只需要照著以下幾張圖片進行就可以
 
+![如圖](image/SU1.jpg)
+
+![如圖](image/SU2.jpg)
+
+![如圖](image/SU3.jpg)
+
+![如圖](image/SU4.jpg)
+
+![如圖](image/SU5.jpg)
+
+![如圖](image/SU6.jpg)
+
+![如圖](image/SU7.jpg)
+
+![如圖](image/SU8.jpg)
+
+![如圖](image/SU9.jpg)
+
+![如圖](image/SU10.jpg)
+
+![如圖](image/SU11.jpg)
+
+![如圖](image/SU12.jpg)
+
+![如圖](image/SU13.jpg)
+
+![如圖](image/SU14.jpg)
+
+![如圖](image/SU15.jpg)
+
+![如圖](image/SU16.jpg)
+
+![如圖](image/SU17.jpg)
+
+![如圖](image/SU18.jpg)
+
+![如圖](image/SU19.jpg)
+
+![如圖](image/SU20.jpg)
+
+![如圖](image/SU21.jpg)
+
+![如圖](image/SU22.jpg)
+
 - 將映像掛載為 DVD 或寫入 USB 後重開機。
 - 選擇 **Installation** 選項進入安裝流程。
 - 安裝過程中若出現 "Validation Check Failed" 提示，選擇 **Yes**（可能需多次）。
