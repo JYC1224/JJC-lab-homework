@@ -78,6 +78,8 @@
 
 ![如圖](image/SU1.jpg)
 
+點選SUSE Linux Enterprise Sever 15 SP7
+
 ![如圖](image/SU2.jpg)
 
 ![如圖](image/SU3.jpg)
