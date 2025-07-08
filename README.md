@@ -22,7 +22,7 @@
 
 本次選用Virtual Box來進行安裝
 
-![如圖]()
+![如圖](image/VB1.jpg)
 
 - 將映像掛載為 DVD 或寫入 USB 後重開機。
 - 選擇 **Installation** 選項進入安裝流程。
