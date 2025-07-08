@@ -32,9 +32,9 @@
 
 ![如圖](image/VB2.jpg)
 
-![如圖]()
+![如圖](image/VB3.jpg)
 
-![如圖]()
+![如圖](image/VB4.jpg)
 
 - 將映像掛載為 DVD 或寫入 USB 後重開機。
 - 選擇 **Installation** 選項進入安裝流程。
