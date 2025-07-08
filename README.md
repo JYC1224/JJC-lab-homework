@@ -26,6 +26,8 @@
 
 ![如圖](image/VB1.jpg)
 
+然後直接打開安裝包
+
 - 將映像掛載為 DVD 或寫入 USB 後重開機。
 - 選擇 **Installation** 選項進入安裝流程。
 - 安裝過程中若出現 "Validation Check Failed" 提示，選擇 **Yes**（可能需多次）。
