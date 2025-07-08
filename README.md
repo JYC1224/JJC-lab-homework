@@ -46,6 +46,14 @@
 
 ![如圖](image/VB6.jpg)
 
+填寫此VM的基本資料
+
+![如圖](image/VB7.jpg)
+
+依照我們對VM的配置填入正確的社設定
+
+![如圖](image/VB8.jpg)
+
 
 - 將映像掛載為 DVD 或寫入 USB 後重開機。
 - 選擇 **Installation** 選項進入安裝流程。
