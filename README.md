@@ -6,7 +6,7 @@
 
 本次教學以下載15 SP7為例
 
-i[如圖](image/suse17.jpg)
+![如圖](image/suse17.jpg)
 
 並準備 **SLE‑15‑Packages-x86_64‑GM‑DVD1.iso** 作為軟體源。
 
