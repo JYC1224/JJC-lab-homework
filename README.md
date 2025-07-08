@@ -18,7 +18,7 @@
 
 將SUSE安裝在VM之前我們必須在實體機器上創建一台VM
 
-◎ 本次安裝VM設置為(CPUS：2 / RAM：8192MB / Disk：60GB)
+◎ 本次安裝VM設置為(CPUS：2 / RAM：4196MB / Disk：60GB)
 
 - 將映像掛載為 DVD 或寫入 USB 後重開機。
 - 選擇 **Installation** 選項進入安裝流程。
