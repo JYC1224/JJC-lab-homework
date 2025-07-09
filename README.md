@@ -82,21 +82,35 @@
 
 ![如圖](image/SU2.jpg)
 
+同意後點next
+
 ![如圖](image/SU3.jpg)
+
+skip registration
 
 ![如圖](image/SU4.jpg)
 
+自行選擇要不要額外裝設
+
 ![如圖](image/SU5.jpg)
+
+next
 
 ![如圖](image/SU6.jpg)
 
+minimal
+
 ![如圖](image/SU7.jpg)
+
+expert partitioner----->start with correct proposal
 
 ![如圖](image/SU8.jpg)
 
 將sda1-sda4全數刪除
 
 ![如圖](image/SU9.jpg)
+
+照下列步驟自行設置
 
 ![如圖](image/SU10.jpg)
 
@@ -112,9 +126,15 @@
 
 ![如圖](image/SU16.jpg)
 
+設置時區
+
 ![如圖](image/SU17.jpg)
 
+skip the creation
+
 ![如圖](image/SU18.jpg)
+
+設密碼
 
 ![如圖](image/SU19.jpg)
 
