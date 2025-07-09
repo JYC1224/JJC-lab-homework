@@ -144,14 +144,7 @@ skip the creation
 
 ![如圖](image/SU22.jpg)
 
-- 將映像掛載為 DVD 或寫入 USB 後重開機。
-- 選擇 **Installation** 選項進入安裝流程。
-- 安裝過程中若出現 "Validation Check Failed" 提示，選擇 **Yes**（可能需多次）。
-
 ---
 
-## 步驟 3：網路設定與軟體源
-
-- 可略過網路設定，但建議先掛入 **Packages ISO** 作為離線軟體源。
-- 在 “Additional Product” 或 “Extensions & Modules” 階段選擇：
+## 步驟 3：
 
