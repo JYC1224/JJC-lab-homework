@@ -259,3 +259,7 @@ skip the creation
 若輸入chage -d 0 student01
 
 會把「上次變更密碼」設定成 0 系統會強迫該使用者下次登入時重設密碼
+
+
+7.sudo
+7-1 wheel group could run all commonad
