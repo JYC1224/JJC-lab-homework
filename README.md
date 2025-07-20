@@ -153,7 +153,21 @@ skip the creation
 # network
 2-1 DHCP
 
+打開 Yast→ 選擇 System → Network Settings
+
+![如圖](image/DHCPyast.jpg)
+
+輸入指令確認有無連上網路
+
+![如圖](image/ping888.jpg)
+
 2-2 static IP
+
+輸入vim /etc/sysconfig/network/ifcfg-eth0
+
+調整內容
+
+![如圖](image/static.jpg)
 
 2-3 show ip, subnet mask, routing/gate way
 
