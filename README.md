@@ -179,4 +179,8 @@ skip the creation
 
 ![如圖](image/gateway.jpg)
 
+查詢Subnet Mask---->輸入ip addr
+
+![如圖](image/subnestmask.jpg)
+
 2-4 2 vm access each other
