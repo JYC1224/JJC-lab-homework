@@ -184,3 +184,7 @@ skip the creation
 ![如圖](image/subnestmask.jpg)
 
 2-4 2 vm access each other
+
+3.setup ssh server and access it
+
+<img width="746" height="419" alt="image" src="https://github.com/user-attachments/assets/d26cf510-b05d-4e12-81c8-41de21d594e6" />
