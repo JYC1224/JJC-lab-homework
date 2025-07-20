@@ -187,4 +187,10 @@ skip the creation
 
 3.setup ssh server and access it
 
+照以下順序輸入指令
+
+1.zypper in openssh   2.systemctl start sshd  3.systemctl enable sshd  4.systemctl status sshd
+
+最後若出現Active: active (running) 這樣就代表你已成功啟動 SSH Server
+
 <img width="746" height="419" alt="image" src="https://github.com/user-attachments/assets/d26cf510-b05d-4e12-81c8-41de21d594e6" />
