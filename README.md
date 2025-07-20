@@ -171,4 +171,8 @@ skip the creation
 
 2-3 show ip, subnet mask, routing/gate way
 
+查看 IP----->使用ip a
+
+![如圖](image/ip a.jpg)
+
 2-4 2 vm access each other
