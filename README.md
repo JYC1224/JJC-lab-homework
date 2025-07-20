@@ -167,6 +167,16 @@ skip the creation
 
 調整內容
 
+BOOTPROTO='static'
+
+STARTMODE='auto'
+
+IPADDR='192.168.1.100/24'
+
+GATEWAY='192.168.1.1'
+
+NAME='eth0'
+
 ![如圖](image/static.jpg)
 
 2-3 show ip, subnet mask, routing/gate way
