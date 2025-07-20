@@ -228,9 +228,20 @@ skip the creation
 
 5-2 install mlocate, apache
 
-使用yast repositories
+回到 YaST 主畫面，選擇：Software Management
+
+搜尋 mlocate → 勾選並安裝
+
+搜尋 apache2 → 勾選並安裝
+
+按Accept開始安裝
 
 5-3 find package to include /usr/bin/chsh
+
+輸入zypper wp /usr/bin/chsh
+
+<img width="1280" height="195" alt="image" src="https://github.com/user-attachments/assets/bdd576d5-3d26-44d7-ae89-fe003c889035" />
+
 
 5-4 list all file in mlocate
 
