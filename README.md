@@ -148,3 +148,13 @@ skip the creation
 
 ## 步驟 3：
 
+
+
+# network
+2-1 DHCP
+
+2-2 static IP
+
+2-3 show ip, subnet mask, routing/gate way
+
+2-4 2 vm access each other
