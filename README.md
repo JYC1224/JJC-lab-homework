@@ -208,3 +208,11 @@ skip the creation
 3.firewall-cmd --list-all
 
 <img width="414" height="332" alt="image" src="https://github.com/user-attachments/assets/ce526b27-c6f5-46e9-a058-667ecff4bd08" />
+
+
+
+4.change hostname
+
+
+
+5.repo & package
