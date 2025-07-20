@@ -173,6 +173,10 @@ skip the creation
 
 查看 IP----->使用ip a
 
-![如圖](image/ip a.jpg)
+![如圖](image/ipa.jpg)
+
+查看 gateway----->ip route
+
+![如圖](image/gateway.jpg)
 
 2-4 2 vm access each other
