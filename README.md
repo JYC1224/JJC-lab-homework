@@ -187,6 +187,8 @@ skip the creation
 
 3.setup ssh server and access it
 
+3-1 enable ssh server
+
 照以下順序輸入指令
 
 1.zypper in openssh   2.systemctl start sshd  3.systemctl enable sshd  4.systemctl status sshd
@@ -194,3 +196,15 @@ skip the creation
 最後若出現Active: active (running) 這樣就代表你已成功啟動 SSH Server
 
 <img width="746" height="419" alt="image" src="https://github.com/user-attachments/assets/d26cf510-b05d-4e12-81c8-41de21d594e6" />
+
+
+3-2 setup firewall
+
+依序輸入
+1.firewall-cmd --permanent --add-service=ssh
+
+2.firewall-cmd --reload
+
+3.firewall-cmd --list-all
+
+<img width="414" height="332" alt="image" src="https://github.com/user-attachments/assets/ce526b27-c6f5-46e9-a058-667ecff4bd08" />
