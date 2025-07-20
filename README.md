@@ -216,3 +216,20 @@ skip the creation
 
 
 5.repo & package
+
+5-1 setup DVD or image iso repo
+
+使用zypper ar file:///mnt/.....  名稱可以自己決定
+
+再用zypper lr  檢查是否新增成功
+
+<img width="1280" height="148" alt="image" src="https://github.com/user-attachments/assets/f2faa7c4-9381-4879-948a-521aa86418ed" />
+
+
+5-2 install mlocate, apache
+
+使用yast repositories
+
+5-3 find package to include /usr/bin/chsh
+
+5-4 list all file in mlocate
