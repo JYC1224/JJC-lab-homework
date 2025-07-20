@@ -233,3 +233,29 @@ skip the creation
 5-3 find package to include /usr/bin/chsh
 
 5-4 list all file in mlocate
+
+
+
+6.user management
+
+6-1 create user account
+
+使用useradd [-s /bin/bash] [-m] newuser
+
+使用passwd設定密碼
+
+6-2 user join to wheel group
+
+使用usermod -g XXXX newuser 將成員加入群組
+
+可用cat /etc/group查看系統有哪些群組
+
+6-3 force change user password when next login
+
+使用以下指令(chage [option] newuser)
+
+-d LAST_DAY: 設定上次密碼變更的日期
+
+若輸入chage -d 0 student01
+
+會把「上次變更密碼」設定成 0 系統會強迫該使用者下次登入時重設密碼
