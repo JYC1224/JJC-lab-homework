@@ -150,7 +150,7 @@ skip the creation
 
 
 
-# network
+## 2.network
 2-1 DHCP
 
 打開 Yast→ 選擇 System → Network Settings
@@ -195,7 +195,7 @@ NAME='eth0'
 
 2-4 2 vm access each other
 
-3.setup ssh server and access it
+## 3.setup ssh server and access it
 
 3-1 enable ssh server
 
@@ -211,6 +211,7 @@ NAME='eth0'
 3-2 setup firewall
 
 依序輸入
+
 1.firewall-cmd --permanent --add-service=ssh
 
 2.firewall-cmd --reload
@@ -221,11 +222,11 @@ NAME='eth0'
 
 
 
-4.change hostname
+## 4.change hostname
 
 
 
-5.repo & package
+## 5.repo & package
 
 5-1 setup DVD or image iso repo
 
@@ -257,7 +258,7 @@ NAME='eth0'
 
 
 
-6.user management
+## 6.user management
 
 6-1 create user account
 
@@ -282,5 +283,5 @@ NAME='eth0'
 會把「上次變更密碼」設定成 0 系統會強迫該使用者下次登入時重設密碼
 
 
-7.sudo
+## 7.sudo
 7-1 wheel group could run all commonad
