@@ -224,6 +224,13 @@ NAME='eth0'
 
 ## 4.change hostname
 
+1.開啟yast
+
+2.選擇 System → Network Settings
+
+3.修改Hostname欄位並儲存
+
+<img width="1276" height="797" alt="image" src="https://github.com/user-attachments/assets/88661b62-0eb6-442e-8eac-e2a8a2a79052" />
 
 
 ## 5.repo & package
