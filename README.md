@@ -295,6 +295,7 @@ NAME='eth0'
 ## 7.sudo
 7-1 wheel group could run all commonad
 
+使用visudo指令進入vi編輯模式
 
 ## 8.ssh
 8-1. generate ssh key
