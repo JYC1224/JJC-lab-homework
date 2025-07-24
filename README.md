@@ -275,9 +275,11 @@ NAME='eth0'
 
 6-2 user join to wheel group
 
-使用usermod -g XXXX newuser 將成員加入群組
+使用usermod -aG wheel user1 將成員加入群組
 
 可用cat /etc/group查看系統有哪些群組
+
+使用id user1便能確認user1有哪些群組
 
 6-3 force change user password when next login
 
