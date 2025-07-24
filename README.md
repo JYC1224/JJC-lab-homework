@@ -269,9 +269,9 @@ NAME='eth0'
 
 6-1 create user account
 
-使用useradd [-s /bin/bash] [-m] newuser
+使用useradd [-s /bin/bash] [-m] user1
 
-使用passwd設定密碼
+使用passwd user1設定密碼
 
 6-2 user join to wheel group
 
