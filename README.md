@@ -292,3 +292,26 @@ NAME='eth0'
 
 ## 7.sudo
 7-1 wheel group could run all commonad
+
+
+## 8.ssh
+8-1. generate ssh key
+
+使用ssh-keygen 產生一組金鑰
+
+會出現下代碼 代表已經產生公鑰與私鑰
+
+<img width="476" height="499" alt="image" src="https://github.com/user-attachments/assets/f499244b-1738-4756-8bdd-77ec8a457a1e" />
+
+8-2. ssh login without password
+
+使用ssh-copy-id user1@VM1的ip 目的是複製公鑰到遠端伺服器
+
+再次輸入ssh user1@VM1的ip，就不需要輸入密碼了
+
+<img width="1180" height="804" alt="image" src="https://github.com/user-attachments/assets/2f3ac59a-594c-4800-a0e7-9a8e2fb2d86c" />
+
+
+8-3. file transfer by sftp
+
+8-4. file transfer by scp
