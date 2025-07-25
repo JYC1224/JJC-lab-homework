@@ -389,6 +389,15 @@ Visual Mode按 v：進入文字選取模式,按 V：選取整行,按 Ctrl-v：�
 
 10-4. on-line help
 
+在 Vim 中輸入：:help
 
+也能指定特定主題的幫助
+
+:help insert
+
+:help visual
+
+:help write
 
 10-5. compare file
+
