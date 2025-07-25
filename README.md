@@ -356,3 +356,39 @@ Ctrl+a 然後按 S     # 建立新區域 (水平分割)
 Ctrl+a 然後按 |     # 建立新區域 (垂直分割)
 
 9-5. setup caption & hardstatus*
+
+## 10.vim
+10-1. create text file "Hello Vim!"
+
+輸入vim hello.txt來建立一個檔案
+
+按i進入插入模式並輸入：Hello Vim!
+
+按 Esc 回到一般模式並輸入 :wq 存檔並離開
+
+10-2. split vertical & horizontal screen
+
+水平分割：輸入:split hello.txt
+
+<img width="356" height="979" alt="image" src="https://github.com/user-attachments/assets/4cfa6f53-56a7-4c47-be02-42362b35da6c" />
+
+垂直分割：:vsplit hello.txt
+
+<img width="1895" height="982" alt="image" src="https://github.com/user-attachments/assets/f95e5414-664b-46c1-ab66-103e2b6fe2d0" />
+
+
+10-3. go to normal mode, insert mode, command mode, visual mode
+
+Normal Mode:預設模式，按 Esc 回到一般模式
+
+Insert Mode:按i
+
+Command-Line Mode:按 : 進入
+
+Visual Mode按 v：進入文字選取模式,按 V：選取整行,按 Ctrl-v：選取區塊
+
+10-4. on-line help
+
+
+
+10-5. compare file
