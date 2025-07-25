@@ -326,3 +326,30 @@ NAME='eth0'
 8-3. file transfer by sftp
 
 8-4. file transfer by scp
+
+
+## 9.screen
+
+9-1. create screen with session name
+
+使用screen [-S session_name]指令 可以順便命名(此處命名為hw)
+
+9-2. create & switch window
+
+建立新視窗:Ctrl + a 然後按 c
+
+Ctrl+a 然後按 '    可以切換 window
+
+Ctrl + a 然後按 "  可以列出所有視窗清單
+
+9-3. deattach & re-attach screen
+
+使用Ctrl + a 然後按 d來離線
+
+會顯示:detached from xxxx.hw
+
+使用screen -r hw可以重新連線
+
+9-4. split vertical & horizontal screen
+
+9-5. setup caption & hardstatus*
