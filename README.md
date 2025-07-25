@@ -352,4 +352,7 @@ Ctrl + a 然後按 "  可以列出所有視窗清單
 
 9-4. split vertical & horizontal screen
 
+Ctrl+a 然後按 S     # 建立新區域 (水平分割)
+Ctrl+a 然後按 |     # 建立新區域 (垂直分割)
+
 9-5. setup caption & hardstatus*
