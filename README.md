@@ -297,6 +297,12 @@ NAME='eth0'
 
 使用visudo指令進入vi編輯模式
 
+在字串中找到   # %wheel ALL=(ALL) ALL
+
+把# 刪掉變成%wheel ALL=(ALL) ALL
+
+要離開vi編輯模式只需按下 Esc -----> 輸入 :wq 然後按 Enter
+
 ## 8.ssh
 8-1. generate ssh key
 
