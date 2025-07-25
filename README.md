@@ -401,3 +401,8 @@ Visual Mode按 v：進入文字選取模式,按 V：選取整行,按 Ctrl-v：�
 
 10-5. compare file
 
+先創立兩個檔案(file1 file2)並用vim編輯
+
+輸入vimdiff file1.txt file2.txt 即可對兩個檔案進行比較
+
+<img width="1896" height="987" alt="image" src="https://github.com/user-attachments/assets/ae04ca7c-c254-4408-8b1d-90d55fa0ed51" />
