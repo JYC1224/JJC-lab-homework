@@ -303,6 +303,8 @@ NAME='eth0'
 
 要離開vi編輯模式只需按下 Esc -----> 輸入 :wq 然後按 Enter
 
+輸入usermod -aG wheel user1
+
 ## 8.ssh
 8-1. generate ssh key
 
