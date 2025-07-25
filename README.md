@@ -273,6 +273,7 @@ NAME='eth0'
 
 使用passwd user1設定密碼
 
+
 6-2 user join to wheel group
 
 使用usermod -aG wheel user1 將成員加入群組
@@ -280,6 +281,7 @@ NAME='eth0'
 可用cat /etc/group查看系統有哪些群組
 
 使用id user1便能確認user1有哪些群組
+
 
 6-3 force change user password when next login
 
@@ -293,6 +295,7 @@ NAME='eth0'
 
 
 ## 7.sudo
+
 7-1 wheel group could run all commonad
 
 使用visudo指令進入vi編輯模式
@@ -305,7 +308,9 @@ NAME='eth0'
 
 輸入usermod -aG wheel user1
 
+
 ## 8.ssh
+
 8-1. generate ssh key
 
 使用ssh-keygen 產生一組金鑰
@@ -313,6 +318,7 @@ NAME='eth0'
 會出現下代碼 代表已經產生公鑰與私鑰
 
 <img width="476" height="499" alt="image" src="https://github.com/user-attachments/assets/f499244b-1738-4756-8bdd-77ec8a457a1e" />
+
 
 8-2. ssh login without password
 
@@ -325,6 +331,7 @@ NAME='eth0'
 
 8-3. file transfer by sftp
 
+
 8-4. file transfer by scp
 
 
@@ -334,6 +341,7 @@ NAME='eth0'
 
 使用screen [-S session_name]指令 可以順便命名(此處命名為hw)
 
+
 9-2. create & switch window
 
 建立新視窗:Ctrl + a 然後按 c
@@ -341,6 +349,7 @@ NAME='eth0'
 Ctrl+a 然後按 '    可以切換 window
 
 Ctrl + a 然後按 "  可以列出所有視窗清單
+
 
 9-3. deattach & re-attach screen
 
@@ -350,14 +359,17 @@ Ctrl + a 然後按 "  可以列出所有視窗清單
 
 使用screen -r hw可以重新連線
 
+
 9-4. split vertical & horizontal screen
 
 Ctrl+a 然後按 S     # 建立新區域 (水平分割)
 Ctrl+a 然後按 |     # 建立新區域 (垂直分割)
 
+
 9-5. setup caption & hardstatus*
 
 ## 10.vim
+
 10-1. create text file "Hello Vim!"
 
 輸入vim hello.txt來建立一個檔案
@@ -365,6 +377,7 @@ Ctrl+a 然後按 |     # 建立新區域 (垂直分割)
 按i進入插入模式並輸入：Hello Vim!
 
 按 Esc 回到一般模式並輸入 :wq 存檔並離開
+
 
 10-2. split vertical & horizontal screen
 
@@ -387,6 +400,7 @@ Command-Line Mode:按 : 進入
 
 Visual Mode按 v：進入文字選取模式,按 V：選取整行,按 Ctrl-v：選取區塊
 
+
 10-4. on-line help
 
 在 Vim 中輸入：:help
@@ -398,6 +412,7 @@ Visual Mode按 v：進入文字選取模式,按 V：選取整行,按 Ctrl-v：�
 :help visual
 
 :help write
+
 
 10-5. compare file
 
