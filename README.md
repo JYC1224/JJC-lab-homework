@@ -387,6 +387,17 @@ Ctrl+a 然後按 |     # 建立新區域 (垂直分割)
 
 9-5. setup caption & hardstatus*
 
+輸入vim ~/.screenrc
+
+加入這些設定：
+
+caption always "%{= kw}Window %n: %t"
+
+hardstatus alwayslastline "%{= kG}[%n] %t %H"
+
+儲存後，下次開啟 screen 就會自動載入這些設定。
+
+
 ## 10.vim
 
 10-1. create text file "Hello Vim!"
