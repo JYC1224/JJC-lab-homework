@@ -348,6 +348,11 @@ NAME='eth0'
 
 8-4. file transfer by scp
 
+scp hello.txt user2@127.0.0.1:~/.
+
+目的是從目前使用者（本機）將檔案 hello.txt 傳送到同一台機器上 user2 使用者的家目錄 (~) 中。
+
+這樣就完成了
 
 ## 9.screen
 
