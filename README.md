@@ -319,7 +319,6 @@ NAME='eth0'
 
 <img width="476" height="499" alt="image" src="https://github.com/user-attachments/assets/f499244b-1738-4756-8bdd-77ec8a457a1e" />
 
-
 8-2. ssh login without password
 
 使用ssh-copy-id user1@VM1的ip 目的是複製公鑰到遠端伺服器
@@ -331,6 +330,21 @@ NAME='eth0'
 
 8-3. file transfer by sftp
 
+創建文字檔方法見10-1
+
+我們要傳送一名為hello.txt的檔案
+
+使用sftp user1@127.0.0.1
+
+目的是用 SFTP 傳檔工具，登入「user1」帳號在 127.0.0.1（也就是自己的機器）上。
+
+<img width="640" height="159" alt="image" src="https://github.com/user-attachments/assets/b96efd13-dd8f-4cc3-8705-ef9c571c6fb1" />
+
+用put hello.txt把你現在這台電腦上的 hello.txt上傳到遠端使用者 user1 的家目錄
+
+輸入ls後即可看到hello.txt
+
+輸入exit後即可跳出sftp模式
 
 8-4. file transfer by scp
 
