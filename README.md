@@ -610,6 +610,20 @@ Visual Mode按 v：進入文字選取模式,按 V：選取整行,按 Ctrl-v：�
 
 2-6-2. explain ip address command all column
 
+輸入ip address 來顯示每個介面的 IP 位址資訊
+
+<img width="1019" height="343" alt="image" src="https://github.com/user-attachments/assets/83e318fa-2677-4695-ab63-8fbac8e2f0d3" />
+
+| 欄位                 | 解釋                                 |
+| ------------------ | ---------------------------------- |
+| `inet`             | IPv4 位址                            |
+| `192.168.1.100/24` | IP 位址與子網遮罩                         |
+| `brd`              | 廣播位址                               |
+| `scope`            | IP 位址的範圍（`global`, `link`, `host`） |
+| `dynamic`          | 由 DHCP 自動分配                        |
+| `inet6`            | IPv6 位址                            |
+
+
 2-6-3. explain ip route command all column
 
 2-6-4. explain ip neighbor command all column'
