@@ -489,7 +489,19 @@ Visual Mode按 v：進入文字選取模式,按 V：選取整行,按 Ctrl-v：�
 
 1-3-1. run vi a.txt command to background
 
+你可以輸入：vi a.txt
+
+然後按下：Ctrl + Z
+
+這樣就會暫停 vi 並將它送到背景，變成一個背景作業（Stopped）。
+
+系統會顯示類似：[1]+  Stopped                 vi a.txt
+
 1-3-2. call %1 to frontground
+
+背景作業的編號是 %1，你可以用 fg 指令將它帶回前景執行：
+
+輸入指令fg %1 這樣 vi a.txt 就會重新在畫面上打開，回到你剛剛編輯的狀態。
 
 ## 2.hardware
 
