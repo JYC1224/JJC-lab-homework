@@ -459,6 +459,21 @@ Visual Mode按 v：進入文字選取模式,按 V：選取整行,按 Ctrl-v：�
 
 1-1. explain ps aux command all field
 
+此指令能列出目前系統中所有的行程資訊（process），每一列就是一個行程。
+
+USER	該行程的擁有者（哪個使用者啟動的）/
+PID	行程的唯一 ID（Process ID)/
+%CPU	行程使用的 CPU 百分比/
+%MEM	行程使用的記憶體百分比/
+VSZ	虛擬記憶體大小（單位 KB)/
+RSS	實體記憶體使用量（常駐記憶體，單位 KB）/
+TTY	終端機類型，若是 ? 表示非終端啟動的行程（如背景服務）/
+STAT	行程狀態，例如：R（執行中）、S（休眠）、Z（殭屍）等/
+START	行程的啟動時間或日期/
+TIME	行程使用 CPU 的總時間/
+COMMAND	啟動行程時所下的指令與參數/
+
+
 1-2. explain kill -l command all signal number
 
 1-3-1. run vi a.txt command to background
