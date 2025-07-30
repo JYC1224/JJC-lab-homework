@@ -623,8 +623,22 @@ Visual Mode按 v：進入文字選取模式,按 V：選取整行,按 Ctrl-v：�
 | `dynamic`          | 由 DHCP 自動分配                        |
 | `inet6`            | IPv6 位址                            |
 
-
 2-6-3. explain ip route command all column
+
+輸入ip route會出現
+
+default via 10.0.2.2 dev eth0 proto dhcp
+
+10.0.2.0/24 dev eth0 proto kernel scope link src 10.0.2.15
+
+| 欄位             | 解釋                  |
+| -------------- | ------------------- |
+| `default`      | 預設路由                |
+| `via`          | 下一跳（gateway）        |
+| `dev`          | 哪個介面發送封包（如 eth0）    |
+| `proto kernel` | 路由來源（kernel 是自動加入）  |
+| `scope link`   | 路由範圍（這裡是 link，表示直連） |
+| `src`          | 本機 IP 位址            |
 
 2-6-4. explain ip neighbor command all column'
 
