@@ -478,6 +478,15 @@ Visual Mode按 v：進入文字選取模式,按 V：選取整行,按 Ctrl-v：�
 
 1-2. explain kill -l command all signal number
 
+| 編號 | 名稱      | 說明              |
+| -- | ------- | --------------- |
+| 1  | SIGHUP  | 關閉終端或重新載入設定     |
+| 2  | SIGINT  | 中斷（Ctrl + C）    |
+| 9  | SIGKILL | 立即強制終止行程（不能被忽略） |
+| 15 | SIGTERM | 結束行程（可被攔截）      |
+| 18 | SIGCONT | 繼續（如果之前有暫停）     |
+| 19 | SIGSTOP | 暫停（不能被攔截）       |
+
 1-3-1. run vi a.txt command to background
 
 1-3-2. call %1 to frontground
