@@ -581,6 +581,16 @@ Visual Mode按 v：進入文字選取模式,按 V：選取整行,按 Ctrl-v：�
 
 2-5-2. use du sort file size in current directory
 
+使用du -sh * | sort -h 來依檔案大小排序目前目錄下的項目(如下圖)
+
+<img width="177" height="139" alt="image" src="https://github.com/user-attachments/assets/f5acfbd7-a186-40b2-aa4c-47278c16ad62" />
+
+| 組合說明                                               |
+| -------------------------------------------------- |
+| `du -sh *`：列出目前目錄下每個檔案/資料夾的磁碟使用量（如上）               |
+| `sort -h`：根據人類可讀格式進行排序（`-h` 是 human-readable sort） |
+
+
 2-6-1. explain ip link command all column
 
 2-6-2. explain ip address command all column
