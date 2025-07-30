@@ -507,6 +507,22 @@ Visual Mode按 v：進入文字選取模式,按 V：選取整行,按 Ctrl-v：�
 
 2-1. explain lscpu command all column
 
+使用:lscpu 顯示 CPU 架構與核心的相關資訊
+
+| 欄位名稱                   | 說明                                |
+| ---------------------- | --------------------------------- |
+| **Architecture**       | 處理器架構（例如 x86\_64 表示 64 位元）        |
+| **CPU(s)**             | 總邏輯核心數（含多執行緒）                     |
+| **Thread(s) per core** | 每個實體核心有幾個執行緒（HT）                  |
+| **Core(s) per socket** | 每個 CPU 插槽的實體核心數                   |
+| **Socket(s)**          | 插槽數（即有幾顆實體 CPU）                   |
+| **Vendor ID**          | 廠牌（如 GenuineIntel 或 AuthenticAMD） |
+| **Model name**         | CPU 的商品名稱（例如 Intel i7-9750H）      |
+| **CPU MHz**            | 當前 CPU 頻率                         |
+| **Virtualization**     | 是否支援虛擬化（VT-x, AMD-V）              |
+| **NUMA node(s)**       | NUMA 架構中的節點數                      |
+| **Flags**              | 支援的 CPU 指令集，例如 SSE, AVX 等         |
+
 2-2. explain free command all column
 
 2-3. explain lsblk command all column
