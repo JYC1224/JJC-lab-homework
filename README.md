@@ -656,6 +656,17 @@ fe80::2 dev eth0 lladdr 52:56:00:00:00:02 router STALE
 
 2-7-1. use dmidecode show bios vendor
 
+輸入dmidecode -t bios 會出現(如下圖)
+
+<img width="629" height="418" alt="image" src="https://github.com/user-attachments/assets/ef1db9fa-3948-4a6d-9dc1-bad6ad5d6dff" />
+
+| 欄位             | 說明                     |
+| -------------- | ---------------------- |
+| `Vendor`       | BIOS 製造商，如 AMI、innotek GmbH |
+| `Version`      | BIOS 版本號               |
+| `Release Date` | BIOS 發布日期              |
+| `ROM Size`     | BIOS ROM 大小            |
+
 2-7-2. use dmidecode show processor
 
 2-7-3. use dmidecode show memory/ram
