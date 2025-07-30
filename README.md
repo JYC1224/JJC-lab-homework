@@ -642,6 +642,18 @@ default via 10.0.2.2 dev eth0 proto dhcp
 
 2-6-4. explain ip neighbor command all column'
 
+輸入ip neighbor
+
+10.0.2.2 dev eth0 lladdr 52:55:0a:00:02:02 REACHABLE
+fe80::2 dev eth0 lladdr 52:56:00:00:00:02 router STALE
+
+| 欄位            | 解釋                                   |
+| ------------- | ------------------------------------ |
+| `192.168.1.1` | 鄰居主機 IP 位址（通常是 Gateway）              |
+| `dev eth0`    | 本機發送封包的介面                            |
+| `lladdr`      | 鄰居的 MAC 位址                           |
+| `REACHABLE`   | 鄰居狀態（如：REACHABLE、STALE、DELAY、FAILED） |
+
 2-7-1. use dmidecode show bios vendor
 
 2-7-2. use dmidecode show processor
