@@ -525,7 +525,32 @@ Visual Mode按 v：進入文字選取模式,按 V：選取整行,按 Ctrl-v：�
 
 2-2. explain free command all column
 
+使用free -h來查看記憶體與 swap 的使用情況，加 -h 會顯示為人類可讀格式（如 MB、GB）。
+
+| 欄位名稱           | 說明                   |
+| -------------- | -------------------- |
+| **total**      | 總記憶體大小               |
+| **used**       | 已使用的記憶體（含快取與 buffer） |
+| **free**       | 尚未使用的記憶體             |
+| **shared**     | 多個行程共用的記憶體區段         |
+| **buff/cache** | 作為快取與 buffer 使用的記憶體  |
+| **available**  | 真正可用於新行程的記憶體（不會影響系統） |
+
+
 2-3. explain lsblk command all column
+
+使用lsblk列出所有區塊設備（硬碟、分割區、USB 裝置），並用樹狀圖表示主從關係。
+
+| 欄位名稱           | 說明                                 |
+| -------------- | ---------------------------------- |
+| **NAME**       | 設備名稱，例如 `sda`、`sda1`（分割區）          |
+| **MAJ\:MIN**   | 主/次設備號碼（供系統識別）                     |
+| **RM**         | 是否為可移除裝置（如 USB）                    |
+| **SIZE**       | 裝置或分割區的大小                          |
+| **RO**         | 是否為唯讀裝置                            |
+| **TYPE**       | 類型，例如 disk（整顆磁碟）、part（分割區）、rom（光碟） |
+| **MOUNTPOINT** | 掛載點位置，例如 `/` 或 `/home`             |
+
 
 2-4. explain df command all column
 
