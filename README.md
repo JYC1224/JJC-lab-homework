@@ -593,6 +593,21 @@ Visual Mode按 v：進入文字選取模式,按 V：選取整行,按 Ctrl-v：�
 
 2-6-1. explain ip link command all column
 
+使用ip link指令會出現
+
+<img width="861" height="138" alt="image" src="https://github.com/user-attachments/assets/5bee6de9-6c35-4a36-b6f7-bde88c011f3d" />
+
+| 欄位              | 解釋                                 |
+| --------------- | ---------------------------------- |
+| `1:`            | 介面編號                               |
+| `lo:` / `eth0:` | 網路介面名稱（lo 是 loopback, eth0 是實體網卡）  |
+| `<FLAGS>`       | 介面狀態（例如 UP 表示啟用中）                  |
+| `mtu`           | 最大傳輸單元 (Maximum Transmission Unit) |
+| `qdisc`         | 佇列管理器 (排程策略)                       |
+| `state`         | 介面狀態，例如 UP, DOWN, UNKNOWN          |
+| `link/ether`    | 網卡的 MAC 位址                         |
+| `brd`           | 廣播位址 (broadcast address)           |
+
 2-6-2. explain ip address command all column
 
 2-6-3. explain ip route command all column
