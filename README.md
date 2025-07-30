@@ -566,7 +566,18 @@ Visual Mode按 v：進入文字選取模式,按 V：選取整行,按 Ctrl-v：�
 
 2-5-1. use du count file space usage in current directory
 
-使用du -sh *
+使用指令du -sh * 可以計算目前目錄中各檔案/目錄佔用的空間(如下圖)
+
+<img width="173" height="138" alt="image" src="https://github.com/user-attachments/assets/8f71e7e8-1052-4226-83f4-b14255f89d34" />
+
+指令解釋:
+
+| 說明                               |
+| -------------------------------- |
+| `du`（Disk Usage）會顯示檔案或資料夾的磁碟使用量。 |
+| `-s` 表示摘要（summary），只顯示每個項目的總和。   |
+| `-h` 表示「人類可讀格式」，例如 KB、MB、GB。     |
+| `*` 表示列出目前目錄下所有的檔案與子目錄的磁碟空間使用量。  |
 
 2-5-2. use du sort file size in current directory
 
