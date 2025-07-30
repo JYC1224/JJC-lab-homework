@@ -551,8 +551,18 @@ Visual Mode按 v：進入文字選取模式,按 V：選取整行,按 Ctrl-v：�
 | **TYPE**       | 類型，例如 disk（整顆磁碟）、part（分割區）、rom（光碟） |
 | **MOUNTPOINT** | 掛載點位置，例如 `/` 或 `/home`             |
 
-
 2-4. explain df command all column
+
+使用df -h顯示所有掛載的檔案系統與其磁碟使用情況。
+
+| 欄位名稱           | 說明                               |
+| -------------- | -------------------------------- |
+| **Filesystem** | 檔案系統的名稱或來源設備，例如 `/dev/sda2`      |
+| **Size**       | 該掛載點的總容量                         |
+| **Used**       | 已使用的容量                           |
+| **Avail**      | 尚可用的容量                           |
+| **Use%**       | 已使用的比例                           |
+| **Mounted on** | 掛載點（目錄），例如 `/`、`/home`、`/boot` 等 |
 
 2-5-1. use du count file space usage in current directory
 
