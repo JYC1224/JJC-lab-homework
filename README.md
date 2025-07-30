@@ -566,6 +566,8 @@ Visual Mode按 v：進入文字選取模式,按 V：選取整行,按 Ctrl-v：�
 
 2-5-1. use du count file space usage in current directory
 
+使用du -sh *
+
 2-5-2. use du sort file size in current directory
 
 2-6-1. explain ip link command all column
