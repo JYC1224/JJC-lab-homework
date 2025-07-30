@@ -669,6 +669,22 @@ fe80::2 dev eth0 lladdr 52:56:00:00:00:02 router STALE
 
 2-7-2. use dmidecode show processor
 
+輸入dmidecode -t processor 會出現下圖
+
+<img width="312" height="65" alt="image" src="https://github.com/user-attachments/assets/d05ed020-d716-42a2-a6a7-87a8c9cbfdcc" />
+
+理論上不該是這樣 這是我使用虛擬機所造成的結果
+
+實際應該會出現以下資訊
+
+| 欄位                   | 說明                       |
+| -------------------- | ------------------------ |
+| `Socket Designation` | 插槽位置                     |
+| `Type`               | 類型（例如：Central Processor） |
+| `Family`             | 處理器系列（例如：Core i7）        |
+| `Manufacturer`       | 製造商（如 Intel、AMD）         |
+| `Version`            | 詳細型號與時脈資訊                |
+
 2-7-3. use dmidecode show memory/ram
 
 2-7-4. use dmidecode show harddisk
