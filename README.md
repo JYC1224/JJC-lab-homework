@@ -451,3 +451,50 @@ Visual Mode按 v：進入文字選取模式,按 V：選取整行,按 Ctrl-v：�
 輸入vimdiff file1.txt file2.txt 即可對兩個檔案進行比較
 
 <img width="1896" height="987" alt="image" src="https://github.com/user-attachments/assets/ae04ca7c-c254-4408-8b1d-90d55fa0ed51" />
+
+
+# part2
+
+## 1.process
+
+1-1. explain ps aux command all field
+
+1-2. explain kill -l command all signal number
+
+1-3-1. run vi a.txt command to background
+
+1-3-2. call %1 to frontground
+
+## 2.hardware
+
+2-1. explain lscpu command all column
+
+2-2. explain free command all column
+
+2-3. explain lsblk command all column
+
+2-4. explain df command all column
+
+2-5-1. use du count file space usage in current directory
+
+2-5-2. use du sort file size in current directory
+
+2-6-1. explain ip link command all column
+
+2-6-2. explain ip address command all column
+
+2-6-3. explain ip route command all column
+
+2-6-4. explain ip neighbor command all column'
+
+2-7-1. use dmidecode show bios vendor
+
+2-7-2. use dmidecode show processor
+
+2-7-3. use dmidecode show memory/ram
+
+2-7-4. use dmidecode show harddisk
+
+2-7-5. use dmidecode show baseboard
+
+2-7-6. use dmidecode show serial
