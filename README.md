@@ -687,6 +687,21 @@ fe80::2 dev eth0 lladdr 52:56:00:00:00:02 router STALE
 
 2-7-3. use dmidecode show memory/ram
 
+輸入dmidecode -t memory 會出現與2-7-2一樣的圖
+
+實際應該會出現以下資訊
+
+| 欄位              | 說明                |
+| --------------- | ----------------- |
+| `Size`          | 單條記憶體容量           |
+| `Form Factor`   | 實體類型（如：DIMM）      |
+| `Locator`       | 插槽名稱              |
+| `Type`          | 記憶體類型（如：DDR4）     |
+| `Speed`         | 記憶體速度（如 2400 MHz） |
+| `Manufacturer`  | 廠牌名稱（如 Kingston）  |
+| `Serial Number` | 製造序號              |
+| `Part Number`   | 零件號碼              |
+
 2-7-4. use dmidecode show harddisk
 
 2-7-5. use dmidecode show baseboard
