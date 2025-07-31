@@ -704,6 +704,10 @@ fe80::2 dev eth0 lladdr 52:56:00:00:00:02 router STALE
 
 2-7-4. use dmidecode show harddisk
 
+
+
 2-7-5. use dmidecode show baseboard
+
+<img width="425" height="241" alt="image" src="https://github.com/user-attachments/assets/4f78e39e-246e-4c73-9154-e47712ae71e3" />
 
 2-7-6. use dmidecode show serial
