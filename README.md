@@ -713,3 +713,7 @@ fe80::2 dev eth0 lladdr 52:56:00:00:00:02 router STALE
 <img width="425" height="241" alt="image" src="https://github.com/user-attachments/assets/4f78e39e-246e-4c73-9154-e47712ae71e3" />
 
 2-7-6. use dmidecode show serial
+
+使用dmidecode -t system 會看到(如下圖)
+
+<img width="701" height="182" alt="image" src="https://github.com/user-attachments/assets/15663b5b-c64d-4df4-92da-43bfe92a5430" />
