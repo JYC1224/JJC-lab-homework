@@ -717,3 +717,132 @@ fe80::2 dev eth0 lladdr 52:56:00:00:00:02 router STALE
 使用dmidecode -t system 會看到(如下圖)
 
 <img width="701" height="182" alt="image" src="https://github.com/user-attachments/assets/15663b5b-c64d-4df4-92da-43bfe92a5430" />
+
+
+## 3.moniter
+
+3-1-1. install procps
+
+輸入指令sudo zypper install procps
+
+跑出'procps' is already installed 代表我們已經安裝了
+
+3-1-2. explain top command all column
+
+輸入top後會出現以下畫面
+
+<img width="1005" height="476" alt="image" src="https://github.com/user-attachments/assets/b798ef7b-37fe-4ad0-a7aa-a10432577efa" />
+
+你會看到上下分為兩區 首先解釋上區
+
+| 欄位                    | 說明                                        |
+| --------------------- | ----------------------------------------- |
+| `uptime`              | 系統開機時間                                    |
+| `users`               | 登入使用者人數                                   |
+| `load average`        | 系統平均負載（1分鐘、5分鐘、15分鐘）                      |
+| `Tasks`               | 任務總數                                      |
+| `running`             | 執行中的行程數                                   |
+| `sleeping`            | 睡眠中的行程數                                   |
+| `stopped`             | 停止的行程                                     |
+| `zombie`              | 殭屍行程（已結束但未清除）                             |
+| `%Cpu(s)`             | 各類 CPU 使用情況（us:使用者、sy:系統、id:閒置、wa:等待 I/O） |
+| `KiB Mem` / `GiB Mem` | 實體記憶體使用情況（total, used, free）              |
+| `Swap`                | 交換記憶體使用情況                                 |
+
+下區:
+
+| 欄位        | 說明                    |
+| --------- | --------------------- |
+| `PID`     | 行程 ID                 |
+| `USER`    | 所有者帳號                 |
+| `%CPU`    | CPU 使用率               |
+| `%MEM`    | 記憶體使用率                |
+| `VIRT`    | 虛擬記憶體使用量              |
+| `RES`     | 常駐記憶體（實際用到的 RAM）      |
+| `SHR`     | 共用記憶體大小               |
+| `S`       | 行程狀態（R:執行中、S:睡眠、Z:殭屍） |
+| `TIME+`   | 使用 CPU 累積時間           |
+| `COMMAND` | 啟動的命令                 |
+
+3-1-3. change top setting and save to config
+
+進入top後使用以下快捷鍵
+
+| 快捷鍵   | 作用                             |
+| ----- | ------------------------------ |
+| `f`   | 編輯顯示欄位                         |
+| `↑ ↓` | 選擇欄位，按 `d` 開關是否顯示              |
+| `o`   | 改變排序欄位                         |
+| `q`   | 離開欄位編輯                         |
+| `z`   | 開/關 彩色顯示                       |
+| `M`   | 按記憶體使用率排序                      |
+| `P`   | 按 CPU 使用率排序                    |
+| `W`   | **儲存設定為預設**（寫入 `$HOME/.toprc`） |
+
+3-1-4. use top batch mode then save n time and delay m sec
+
+3-2-1. install iotop
+
+3-2-2. explain iotop command all column
+
+3-2-3. use iotop batch mode then save n time and delay m sec
+
+3-3-1. install iftop
+
+3-3-2. explain iftop command all column
+
+3-4-1. install sysstat
+
+3-4-2. enable and run sysstat service
+
+3-4-3. use sar show cpu usage
+
+3-4-4. use sar show memory usage
+
+3-4-5. use sar show network interface stats
+
+3-4-6. use sar run queue from the saved data file
+
+3-4-7. explain vmstat command all column
+
+3-4-8. explain iostat command all column
+
+3-4-9. explain mpstat command all column
+
+3-4-10. explain pidstat command all column3-1-1. install procps
+
+3-1-2. explain top command all column
+
+3-1-3. change top setting and save to config
+
+3-1-4. use top batch mode then save n time and delay m sec
+
+3-2-1. install iotop
+
+3-2-2. explain iotop command all column
+
+3-2-3. use iotop batch mode then save n time and delay m sec
+
+3-3-1. install iftop
+
+3-3-2. explain iftop command all column
+
+3-4-1. install sysstat
+
+3-4-2. enable and run sysstat service
+
+3-4-3. use sar show cpu usage
+
+3-4-4. use sar show memory usage
+
+3-4-5. use sar show network interface stats
+
+3-4-6. use sar run queue from the saved data file
+
+3-4-7. explain vmstat command all column
+
+3-4-8. explain iostat command all column
+
+3-4-9. explain mpstat command all column
+
+3-4-10. explain pidstat command all column
