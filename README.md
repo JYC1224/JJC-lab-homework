@@ -792,7 +792,15 @@ fe80::2 dev eth0 lladdr 52:56:00:00:00:02 router STALE
 
 3-2-1. install iotop
 
+使用 zypper in iotop 來安裝iotop
+
 3-2-2. explain iotop command all column
+
+使用指令iotop會出現(如下圖)
+
+<img width="1147" height="401" alt="image" src="https://github.com/user-attachments/assets/2e1b5c56-9dcf-465e-866b-3cb14e8b301b" />
+
+
 
 3-2-3. use iotop batch mode then save n time and delay m sec
 
