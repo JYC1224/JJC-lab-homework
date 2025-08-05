@@ -766,7 +766,7 @@ fe80::2 dev eth0 lladdr 52:56:00:00:00:02 router STALE
 
 3-1-3. change top setting and save to config
 
-進入top後使用以下快捷鍵
+進入top後使用以下快捷鍵可以開始設定
 
 | 快捷鍵   | 作用                             |
 | ----- | ------------------------------ |
@@ -780,6 +780,15 @@ fe80::2 dev eth0 lladdr 52:56:00:00:00:02 router STALE
 | `W`   | **儲存設定為預設**（寫入 `$HOME/.toprc`） |
 
 3-1-4. use top batch mode then save n time and delay m sec
+
+使用top -b -n -d > output.txt
+
+| 參數   | 說明                       |
+| ---- | ------------------------ |
+| `-b` | batch mode（非互動模式，適合用來儲存） |
+| `-n` | 重複次數                     |
+| `-d` | 每次間隔時間（秒）                |
+| `>`  | 將輸出存到檔案                  |
 
 3-2-1. install iotop
 
