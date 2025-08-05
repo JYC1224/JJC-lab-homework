@@ -800,7 +800,16 @@ fe80::2 dev eth0 lladdr 52:56:00:00:00:02 router STALE
 
 <img width="1147" height="401" alt="image" src="https://github.com/user-attachments/assets/2e1b5c56-9dcf-465e-866b-3cb14e8b301b" />
 
-
+| 欄位             | 說明                       |
+| -------------- | ------------------------ |
+| **TID**        | Thread ID（行程或執行緒的 ID）    |
+| **PRIO**       | 優先順序（nice 值）             |
+| **USER**       | 該行程的使用者                  |
+| **DISK READ**  | 磁碟讀取速度（KB/s、MB/s）        |
+| **DISK WRITE** | 磁碟寫入速度                   |
+| **SWAPIN**     | 記憶體交換進入比率 (%)            |
+| **IO**         | I/O 等待時間百分比（高代表 I/O 等很久） |
+| **COMMAND**    | 該行程的啟動指令                 |
 
 3-2-3. use iotop batch mode then save n time and delay m sec
 
