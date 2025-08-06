@@ -1096,4 +1096,8 @@ fe80::2 dev eth0 lladdr 52:56:00:00:00:02 router STALE
 
 <img width="467" height="32" alt="image" src="https://github.com/user-attachments/assets/834f642f-0e11-4589-996c-e4d5c5869213" />
 
+# ssh
 
+5-1-1. install openssh-server
+5-1-2. enable and run sshd
+5-1-3. setup firewall to allow sshd
