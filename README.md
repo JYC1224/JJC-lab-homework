@@ -1043,9 +1043,19 @@ fe80::2 dev eth0 lladdr 52:56:00:00:00:02 router STALE
 
 4-2-1. use ip turn on/off nic
 
+使用指令ip link set eth0 down 來關閉網卡（停用 NIC）
+
+使用指令p link set eth0 up 來開啟網卡（啟用 NIC)
+
+關閉網卡後putty直接連不上
+
 4-2-2. use ip to set static ip address
 
+使用指令ip addr add 192.168.1.100/24 dev eth0
+
 4-2-3. use ip to show current ip address
+
+使用 ip a
 
 4-2-4. use ip to set router
 
