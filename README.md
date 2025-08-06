@@ -977,4 +977,36 @@ fe80::2 dev eth0 lladdr 52:56:00:00:00:02 router STALE
 
 3-4-9. explain mpstat command all column
 
+使用指令mpstat -P ALL 1 5  # 每 1 秒報告所有核心的 CPU 使用率，共 5 次
+
+<img width="971" height="640" alt="image" src="https://github.com/user-attachments/assets/5aa31570-72fb-420b-b391-0c32473beb39" />
+
+| 欄位        | 說明                |
+| --------- | ----------------- |
+| `%usr`    | user space 使用率    |
+| `%nice`   | nice 值較高的行程所用 CPU |
+| `%sys`    | kernel 使用率        |
+| `%iowait` | 等待 I/O 的 CPU 時間   |
+| `%irq`    | 處理硬體中斷            |
+| `%soft`   | 處理軟體中斷            |
+| `%steal`  | 虛擬化時被其他 VM 搶走的時間  |
+| `%idle`   | 閒置時間              |
+
 3-4-10. explain pidstat command all column
+
+使用指令pidstat -u -r -d 1 5 每秒列出所有行程的 CPU、記憶體與 I/O 狀況，共 5 次。
+
+<img width="1003" height="965" alt="image" src="https://github.com/user-attachments/assets/d059b548-a469-4515-924f-d1815400a653" />
+
+| 欄位                    | 說明                    |
+| --------------------- | --------------------- |
+| `UID`                 | 該行程的使用者               |
+| `PID`                 | 行程 ID                 |
+| `%usr / %system`      | user/kernel CPU 使用率   |
+| `%CPU`                | 總 CPU 使用率             |
+| `minflt/s`            | 次要 page fault（不需磁碟存取） |
+| `majflt/s`            | 主要 page fault（需存取磁碟）  |
+| `VSZ`                 | 虛擬記憶體大小（KB）           |
+| `RSS`                 | 實體記憶體大小（KB）           |
+| `kB_rd/s` / `kB_wr/s` | 每秒讀寫磁碟的 KB 數          |
+| `Command`             | 行程名稱                  |
