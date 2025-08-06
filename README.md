@@ -864,9 +864,44 @@ fe80::2 dev eth0 lladdr 52:56:00:00:00:02 router STALE
 
 3-4-3. use sar show cpu usage
 
+使用指令sar -u 1 5                   # 每 1 秒報告一次 CPU 使用率，共 5 次 (如下圖:)
+
+<img width="800" height="185" alt="image" src="https://github.com/user-attachments/assets/e80bdd40-1396-4334-9fb5-b79f75c9678f" />
+
+| 欄位        | 意義                 |
+| --------- | ------------------ |
+| `%user`   | 使用者程式佔用的 CPU 時間    |
+| `%system` | 核心程式佔用的 CPU 時間     |
+| `%iowait` | 等待 I/O 時間（越高可能有瓶頸） |
+| `%idle`   | 閒置時間（越高越好）         |
+
 3-4-4. use sar show memory usage
 
+使用指令sar -r 1 5 (如下圖:)
+
+<img width="1215" height="178" alt="image" src="https://github.com/user-attachments/assets/38a8a66b-6429-4677-a0ca-62989f70bf35" />
+
+| 欄位          | 意義                      |
+| ----------- | ----------------------- |
+| `kbmemfree` | 剩餘記憶體 (kB)              |
+| `kbmemused` | 已用記憶體 (kB)              |
+| `%memused`  | 記憶體使用百分比                |
+| `kbbuffers` | I/O 缓存                  |
+| `kbcached`  | Page cache（已使用但可回收的記憶體） |
+
 3-4-5. use sar show network interface stats
+
+使用指令sar -n DEV 1 5 (如下圖:)
+
+<img width="1021" height="502" alt="image" src="https://github.com/user-attachments/assets/0014cc5e-506d-4cd9-91ba-a7d3b63bd2bc" />
+
+| 欄位        | 說明                      |
+| --------- | ----------------------- |
+| `rxpck/s` | 每秒接收封包數                 |
+| `txpck/s` | 每秒傳送封包數                 |
+| `rxkB/s`  | 每秒接收資料量（kB）             |
+| `txkB/s`  | 每秒傳送資料量（kB）             |
+| `iface`   | 網路介面名稱（如 eth0, ens33 等） |
 
 3-4-6. use sar run queue from the saved data file
 
