@@ -1059,7 +1059,13 @@ fe80::2 dev eth0 lladdr 52:56:00:00:00:02 router STALE
 
 4-2-4. use ip to set router
 
+??????????ip route add default via 192.168.56.1
+
 4-2-5. use ip to show current router
+
+使用指令ip route show
+
+<img width="521" height="64" alt="image" src="https://github.com/user-attachments/assets/14f6da21-fe45-4865-9ff7-7bbb3d95cee1" />
 
 4-3. use ss to check port
 
