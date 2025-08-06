@@ -1015,11 +1015,31 @@ fe80::2 dev eth0 lladdr 52:56:00:00:00:02 router STALE
 
 4-1-1. install iputils
 
+使用指令zypper install iputils 來安裝
+
 4-1-2. use ping to check connect 8.8.8.8
+
+使用ping 8.8.8.8
+
+有一直跑出來就算成功
 
 4-1-3. install traceroute
 
+使用指令zypper install traceroute
+
 4-1-4. use traceroute / tracepath
+
+使用指令traceroute google.com
+
+不知為何一堆***
+
+<img width="717" height="618" alt="image" src="https://github.com/user-attachments/assets/084a2cc8-dfa1-43ba-9ae0-a027405ccaf8" />
+
+使用指令tracepath google.com
+
+不知為何一堆no reply
+
+<img width="668" height="682" alt="image" src="https://github.com/user-attachments/assets/63e03985-15ca-4351-b47f-5a05676db391" />
 
 4-2-1. use ip turn on/off nic
 
