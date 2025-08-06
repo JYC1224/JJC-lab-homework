@@ -1088,4 +1088,12 @@ fe80::2 dev eth0 lladdr 52:56:00:00:00:02 router STALE
 
 4-5-1. install netcat-openbsd
 
+使用zypper install netcat-openbsd 來安裝
+
 4-5-2. use nc to check port
+
+使用指令nc -vz www.google.com 80
+
+<img width="467" height="32" alt="image" src="https://github.com/user-attachments/assets/834f642f-0e11-4589-996c-e4d5c5869213" />
+
+
