@@ -1010,3 +1010,33 @@ fe80::2 dev eth0 lladdr 52:56:00:00:00:02 router STALE
 | `RSS`                 | 實體記憶體大小（KB）           |
 | `kB_rd/s` / `kB_wr/s` | 每秒讀寫磁碟的 KB 數          |
 | `Command`             | 行程名稱                  |
+
+# 4.network troubleshoot tool
+
+4-1-1. install iputils
+
+4-1-2. use ping to check connect 8.8.8.8
+
+4-1-3. install traceroute
+
+4-1-4. use traceroute / tracepath
+
+4-2-1. use ip turn on/off nic
+
+4-2-2. use ip to set static ip address
+
+4-2-3. use ip to show current ip address
+
+4-2-4. use ip to set router
+
+4-2-5. use ip to show current router
+
+4-3. use ss to check port
+
+4-4-1. use dig resolve www.google.com
+
+4-4-2. use nslockup resolve www.google.com
+
+4-5-1. install netcat-openbsd
+
+4-5-2. use nc to check port
