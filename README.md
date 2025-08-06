@@ -1075,9 +1075,16 @@ fe80::2 dev eth0 lladdr 52:56:00:00:00:02 router STALE
 
 4-4-1. use dig resolve www.google.com
 
+使用dig www.google.com
 
+<img width="548" height="321" alt="image" src="https://github.com/user-attachments/assets/d9b1ddac-0588-4df3-babf-78c2d8747074" />
 
 4-4-2. use nslockup resolve www.google.com
+
+使用指令nslookup www.google.com
+
+<img width="261" height="144" alt="image" src="https://github.com/user-attachments/assets/fe2a5251-3daa-45d6-a5a4-c69a6bcd753c" />
+
 
 4-5-1. install netcat-openbsd
 
