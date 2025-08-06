@@ -905,6 +905,9 @@ fe80::2 dev eth0 lladdr 52:56:00:00:00:02 router STALE
 
 3-4-6. use sar run queue from the saved data file
 
+使用指令sar -q -f /var/log/sa/sa05
+
+
 3-4-7. explain vmstat command all column
 
 3-4-8. explain iostat command all column
