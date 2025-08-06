@@ -912,7 +912,45 @@ fe80::2 dev eth0 lladdr 52:56:00:00:00:02 router STALE
 
 3-4-7. explain vmstat command all column
 
-使用指令vmstat 2 5          # 每 2 秒報告一次，共 5 次
+使用指令vmstat 2 5          # 每 2 秒報告一次，共 5 次 (如下圖:)
+
+<img width="826" height="135" alt="image" src="https://github.com/user-attachments/assets/7fde77f0-a799-4d23-a835-2a5dc086900c" />
+
+| 欄位  | 說明                                     |
+| --- | -------------------------------------- |
+| `r` | run queue 中等待 CPU 的行程數（大於 0 表示 CPU 繁忙） |
+| `b` | 進入 uninterruptible sleep 的行程（通常在等 I/O） |
+
+| 欄位      | 說明                         |
+| ------- | -------------------------- |
+| `swpd`  | 使用的 swap 空間大小              |
+| `free`  | 可用記憶體                      |
+| `buff`  | buffer 快取（通常給 block I/O 用） |
+| `cache` | page cache 記憶體             |
+
+| 欄位   | 說明                            |
+| ---- | ----------------------------- |
+| `si` | 每秒從 swap 区交換進記憶體的量            |
+| `so` | 每秒從記憶體交換到 swap 的量（持續大代表記憶體不足） |
+
+| 欄位   | 說明                      |
+| ---- | ----------------------- |
+| `bi` | 每秒從 block device 讀入的區塊數 |
+| `bo` | 每秒寫入到 block device 的區塊數 |
+
+| 欄位   | 說明                        |
+| ---- | ------------------------- |
+| `in` | 每秒中斷數（interrupt）          |
+| `cs` | 每秒上下文切換次數（context switch） |
+
+| 欄位   | 說明                          |
+| ---- | --------------------------- |
+| `us` | user space CPU 使用率          |
+| `sy` | kernel space CPU 使用率        |
+| `id` | CPU 閒置率                     |
+| `wa` | CPU 等待 I/O 的時間              |
+| `st` | 虛擬化系統中被偷走的 CPU（stolen time） |
+
 
 3-4-8. explain iostat command all column
 
