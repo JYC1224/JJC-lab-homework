@@ -1063,13 +1063,19 @@ fe80::2 dev eth0 lladdr 52:56:00:00:00:02 router STALE
 
 4-2-5. use ip to show current router
 
-使用指令ip route show
+使用指令ip route show (如下圖:)
 
 <img width="521" height="64" alt="image" src="https://github.com/user-attachments/assets/14f6da21-fe45-4865-9ff7-7bbb3d95cee1" />
 
 4-3. use ss to check port
 
+使用指令ss -tunlpa       # 查看活躍的 TCP/UDP 連線、監聽埠、數字 IP、行程、所有連線
+
+<img width="1242" height="181" alt="image" src="https://github.com/user-attachments/assets/5abaf720-4e43-4754-9197-9ee9aa299b05" />
+
 4-4-1. use dig resolve www.google.com
+
+
 
 4-4-2. use nslockup resolve www.google.com
 
