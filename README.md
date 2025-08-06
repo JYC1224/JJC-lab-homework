@@ -813,6 +813,23 @@ fe80::2 dev eth0 lladdr 52:56:00:00:00:02 router STALE
 
 3-2-3. use iotop batch mode then save n time and delay m sec
 
+使用指令iotop -b -n <次數N> -d <秒數M> > iotop_output.txt
+
+| 參數   | 說明                |
+| ---- | ----------------- |
+| `-b` | 啟用 batch 模式（非互動式） |
+| `-n` | 執行次數              |
+| `-d` | 間隔秒數              |
+| `>`  | 將輸出存到檔案           |
+
+例如:要執行 10 次，每次間隔 1 秒，結果輸出到 iotop_log.txt：
+
+就要使用iotop -b -n 10 -d 1 > iotop_log.txt
+
+再使用less iotop_log.txt看結果 就會出現下圖:
+
+<img width="1100" height="302" alt="image" src="https://github.com/user-attachments/assets/bfea5f77-4f05-40e4-b0dc-42fd280576a6" />
+
 3-3-1. install iftop
 
 3-3-2. explain iftop command all column
