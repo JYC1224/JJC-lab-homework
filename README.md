@@ -951,8 +951,29 @@ fe80::2 dev eth0 lladdr 52:56:00:00:00:02 router STALE
 | `wa` | CPU 等待 I/O 的時間              |
 | `st` | 虛擬化系統中被偷走的 CPU（stolen time） |
 
-
 3-4-8. explain iostat command all column
+
+使用指令iostat 2 3       # 每 2 秒報告一次，共 3 次 (如下圖:)
+
+<img width="791" height="442" alt="image" src="https://github.com/user-attachments/assets/7f902d5e-eeaa-453f-a01e-b53a5f47ad45" />
+
+| 欄位        | 說明                                |
+| --------- | --------------------------------- |
+| `%user`   | 使用者空間佔用的 CPU 百分比（執行應用程式）          |
+| `%nice`   | nice 值不為 0 的程序使用 CPU 的百分比（低優先權程式） |
+| `%system` | 核心空間佔用的 CPU 百分比（作業系統）             |
+| `%iowait` | CPU 等待 I/O 時間的百分比（表示磁碟慢或忙）        |
+| `%steal`  | 被其他 VM 搶走的 CPU 百分比（虛擬化環境）         |
+| `%idle`   | CPU 閒置百分比（越高代表系統越閒）               |
+
+| 欄位             | 說明                  |
+| -------------- | ------------------- |
+| **Device**     | 裝置名稱（例如 `sda`）      |
+| **tps**        | 每秒傳輸次數（包括讀寫），越高表示越忙 |
+| **kB\_read/s** | 每秒讀取資料量（KB）         |
+| **kB\_wrtn/s** | 每秒寫入資料量（KB）         |
+| **kB\_read**   | 自開機以來總共讀取多少 KB      |
+| **kB\_wrtn**   | 自開機以來總共寫入多少 KB      |
 
 3-4-9. explain mpstat command all column
 
