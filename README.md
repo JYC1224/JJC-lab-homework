@@ -832,7 +832,22 @@ fe80::2 dev eth0 lladdr 52:56:00:00:00:02 router STALE
 
 3-3-1. install iftop
 
+使用指令zypper in iftop 來安裝iftop
+
 3-3-2. explain iftop command all column
+
+使用指令iftop -i eth0 會出現以下畫面
+
+<img width="809" height="515" alt="image" src="https://github.com/user-attachments/assets/ac927a23-29da-4a69-b0d8-cdad7e629bb6" />
+
+| 區域          | 說明                             |
+| ----------- | ------------------------------ |
+| 左邊 IP       | Host A 和 Host B（正在通訊的來源與目的主機）  |
+| `=>` / `<=` | 代表**傳送（Tx）** 或 **接收（Rx）** 資料方向 |
+| 右邊三欄        | 分別是最近 2 秒、10 秒、40 秒內的平均流量      |
+| 最上方橫列       | 顯示總體頻寬使用（TX、RX、TOTAL）          |
+| 最底部橫列       | 可顯示過濾器、排序、總結等資訊                |
+
 
 3-4-1. install sysstat
 
