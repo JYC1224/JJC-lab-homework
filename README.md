@@ -1115,3 +1115,8 @@ systemctl status sshd      # 查看狀態（確認有沒有 active (running)）
 <img width="1165" height="354" alt="image" src="https://github.com/user-attachments/assets/2f275a4e-6e74-481f-98d4-68ad8982c723" />
 
 5-1-3. setup firewall to allow sshd
+
+依序輸入圖片中的指令
+
+<img width="412" height="112" alt="image" src="https://github.com/user-attachments/assets/3f33f955-0084-4495-a5d2-6b6744f0d4c5" />
+
