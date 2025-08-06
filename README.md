@@ -1100,6 +1100,18 @@ fe80::2 dev eth0 lladdr 52:56:00:00:00:02 router STALE
 
 5-1-1. install openssh-server
 
+使用 zypper install openssh 來安裝
+
 5-1-2. enable and run sshd
+
+依序輸入以下指令
+
+systemctl enable sshd      # 開機自動啟動
+
+systemctl start sshd       # 立即啟動
+
+systemctl status sshd      # 查看狀態（確認有沒有 active (running)）
+
+<img width="1165" height="354" alt="image" src="https://github.com/user-attachments/assets/2f275a4e-6e74-481f-98d4-68ad8982c723" />
 
 5-1-3. setup firewall to allow sshd
