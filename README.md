@@ -848,10 +848,19 @@ fe80::2 dev eth0 lladdr 52:56:00:00:00:02 router STALE
 | 最上方橫列       | 顯示總體頻寬使用（TX、RX、TOTAL）          |
 | 最底部橫列       | 可顯示過濾器、排序、總結等資訊                |
 
-
 3-4-1. install sysstat
 
+使用指令zypper in sysstat來安裝
+
 3-4-2. enable and run sysstat service
+
+首先使用systemctl enable sysstat來啟用
+
+再使用systemctl start sysstat來啟動
+
+使用systemctl status sysstat驗證是否啟動成功
+
+如果看到：Active: active (running)即表示成功
 
 3-4-3. use sar show cpu usage
 
