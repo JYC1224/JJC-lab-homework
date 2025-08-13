@@ -1120,3 +1120,39 @@ systemctl status sshd      # 查看狀態（確認有沒有 active (running)）
 
 <img width="412" height="112" alt="image" src="https://github.com/user-attachments/assets/3f33f955-0084-4495-a5d2-6b6744f0d4c5" />
 
+5-1-4. check ssh port
+
+5-2-1. setup sshd only authentication (private key /no password) login
+
+使用指令 ssh-keygen -t rsa -b 4096
+
+並使用ssh-copy-id username@server_ip_address 將公鑰上傳到伺服器
+
+username為 你在 SUSE 伺服器上的帳號名稱
+server_ip_address為 你的 SUSE 虛擬機的 IP 位址
+
+接下來在伺服器上修改 sshd_config 檔案 使用vi /etc/ssh/sshd_config
+
+找到並修改以下兩行（如果前面有 # 符號，請將其移除）：
+
+PubkeyAuthentication yes
+
+PasswordAuthentication no
+
+接著儲存並退出
+
+5-2-2. setup sshd disble root login
+
+5-2-3. setup sshd allow user
+
+5-2-4. setup sshd deny user
+
+5-2-5. setup sshd allow & deny user at same time
+
+5-3-1. setup ssh config with alias hostname and username
+
+5-3-2. use ssh with other port
+
+5-3-2. use ssh execute command (active mode)
+
+5-4-1. use sftp resume file
