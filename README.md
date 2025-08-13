@@ -1143,7 +1143,19 @@ PasswordAuthentication no
 
 5-2-2. setup sshd disble root login
 
+使用vi /etc/ssh/sshd_config 進行編輯
+
+找到 PermitRootLogin 這行，將其設定為 no。
+
 5-2-3. setup sshd allow user
+
+使用vi /etc/ssh/sshd_config 進行編輯
+
+在檔案的最後，新增 AllowUsers 指令，並列出所有允許透過 SSH 登入的使用者，用空格隔開。
+
+我使用AllowUsers user1 user2
+
+現在，只有 user1 和 user2 兩個使用者可以透過 SSH 登入，其他帳號都會被拒絕
 
 5-2-4. setup sshd deny user
 
