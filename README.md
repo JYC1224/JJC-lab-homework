@@ -1159,6 +1159,12 @@ PasswordAuthentication no
 
 5-2-4. setup sshd deny user
 
+使用vi /etc/ssh/sshd_config 進行編輯
+
+使用DenyUsers user1 user2
+
+這條指令會阻止 user1 和 user2 兩個帳號透過 SSH 登入
+
 5-2-5. setup sshd allow & deny user at same time
 
 5-3-1. setup ssh config with alias hostname and username
