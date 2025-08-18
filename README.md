@@ -1167,10 +1167,35 @@ PasswordAuthentication no
 
 5-2-5. setup sshd allow & deny user at same time
 
+AllowUsers的優先級更高，若同時使用會使得 DenyUsers 失去作用
+
 5-3-1. setup ssh config with alias hostname and username
+
+使用vi ~/.ssh/config來編輯 ~/.ssh/config 檔案
+
+並在文件中加入以下內容，為你的虛擬機設定一個別名。
+
+Host test #設定別名
+  HostName 10.0.2.15  # 替換成你的 SUSE 虛擬機 IP
+  
+  User user1             # 替換成你的使用者名稱
+  
+  Port 22              # 替換成你在 sshd_config 中設定的埠號
+  
+  IdentityFile ~/.ssh/id_rsa # 指定金鑰檔案路徑
+
+使用ssh VM名稱 SSH 客戶端就會自動使用你設定的所有參數進行連線
+
+輸入密碼即可
 
 5-3-2. use ssh with other port
 
-5-3-2. use ssh execute command (active mode)
+若要手動指定埠號 使用ssh username@server_ip_address -p 22
+
+如:ssh user1@10.0.2.15 -p 22
+
+之後輸入密碼即可
+
+5-3-3. use ssh execute command (active mode)
 
 5-4-1. use sftp resume file
