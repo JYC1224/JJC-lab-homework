@@ -1198,4 +1198,10 @@ Host test #設定別名
 
 5-3-3. use ssh execute command (active mode)
 
+使用ssh <user>@<host> "<command>"
+
+遠端主機可以是同一台 VM 的另一個 user或另一台 VM兩種都可以，但教學通常是用後者
+
+這邊用
+
 5-4-1. use sftp resume file
