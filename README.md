@@ -1298,6 +1298,24 @@ driftfile /var/lib/chrony/drift
 
 6-3-1. use chronyc show time sources
 
+使用指令chronyc sources查看 chronyd 目前正在與哪些時間伺服器同步，以及它們的同步狀態
+
+<img width="797" height="180" alt="image" src="https://github.com/user-attachments/assets/a98bcacf-626d-4247-913a-c23653a0bd5c" />
+
+輸出解釋
+
+| 欄位 / 符號 | 說明                                                               |
+| :---------- | :----------------------------------------------------------------- |
+| **`*` (星號)** | 你的系統目前正在與此時間源同步。這是主要的時間來源。               |
+| **`^` (上標)** | 此時間源是**候選者**，可用於同步，但目前不是主要來源。             |
+| **`?`** | 連線有問題，可能無法取得時間數據。                                 |
+| `Name/IP address`      | 時間伺服器的名稱或 IP 位址。                                       |
+| `Stratum`     | 伺服器的**層級**。數字越低，時間源越精確。                        |
+| `Poll`        | 下一次向該伺服器發送請求的**時間間隔**（單位：秒）。              |
+| `Reach`       | 成功從此時間源接收到的數據包次數。最大值是 377。                 |
+| `LastRx`      | 上次從此時間源收到數據的時間間隔（單位：秒）。                    |
+| `Last`      | 你的系統時鐘與此時間源的**時間差異**。單位是毫秒（ms），越接近零越好。 |
+
 6-3-2. use chronyc synchronize with time source
 
 6-3-3. use chronyc show how far the system clock
