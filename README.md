@@ -1215,3 +1215,43 @@ Host test #設定別名
 | `whoami` | 顯示你目前在伺服器上使用的使用者名稱。 |
 
 5-4-1. use sftp resume file
+
+# 6.ntp
+6-1-1. install chrony
+
+使用指令zypper install chrony來安裝
+
+6-1-2. enable and run chronyd
+
+使用指令systemctl start chronyd來啟動chronyd
+
+也可以用systemctl enable chronyd設定開機自啟動
+
+使用systemctl status chronyd檢查服務狀態
+
+看到 Active: active (running) 的訊息，這表示服務已成功啟動
+
+6-1-3. setup firewall to allow ntp
+
+使用指令firewall-cmd --permanent --add-service=ntp來永久允許 NTP 服務(收到success回覆)
+
+使用指令firewall-cmd --reload來重新載入防火牆設定(收到success回覆)
+
+使用指令firewall-cmd --list-services來驗證是否有開放
+
+系統回覆dhcpv6-client ntp ssh 確認輸出裡有 ntp 表示成功。
+
+6-1-4. check ntp port
+
+6-2-1. setup chronyd ntp server (time.google.com, time.hinet.net, time.iis.sinica.edu.tw)
+
+6-2-2. setup chronyd ntp server allow subnet host
+
+6-2-3. setup chronyd ntp server deny all host
+
+6-3-1. use chronyc show time sources
+
+6-3-2. use chronyc synchronize with time source
+
+6-3-3. use chronyc show how far the system clock
+
