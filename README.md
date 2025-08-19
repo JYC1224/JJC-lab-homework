@@ -1375,9 +1375,29 @@ driftfile /var/lib/chrony/drift
 
 7-1-4. setup firewall to allow nis
 
+NIS 需要 RPC (rpcbind) 和 NIS 本身 兩個服務才能運作 
+
+使用指令sudo firewall-cmd --permanent --add-service=rpc-bind
+
+使用指令sudo firewall-cmd --permanent --add-service=nis--------->失敗
+
 7-1-5. check nis port
 
+使用指令rpcinfo -p | grep ypserv (如下圖)
+
+<img width="333" height="82" alt="image" src="https://github.com/user-attachments/assets/190e1471-62cd-47f3-b0b7-333c3eb1e200" />
+
+這代表 ypserv 用 UDP 607、TCP 607 來監聽
+
 7-2-1. enable and run yppasswdd service
+
+使用指令sudo systemctl start yppasswdd來啟動服務
+
+使用指令sudo systemctl enable yppasswdd來設定開機自動啟動
+
+使用指令sudo systemctl status yppasswdd來檢查狀態
+
+看到active(running)表示成功
 
 7-2-2. setup firewall to allow nis
 
