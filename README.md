@@ -1469,3 +1469,7 @@ NFS 需要開啟以下服務：nfs → NFS 本身/rpc-bind → RPC 綁定器 (po
 使用指令firewall-cmd --list-services確認服務有加進去
 
 8-1-5. check nfs port
+
+使用指令rpcinfo -p看系統有沒有在監聽
+
+nfs 服務會固定在 2049 埠，mountd 則可能使用不同的埠號，只要它們出現在列表中，就表示防火牆已為它們開啟了正確的埠，NFS 服務也已準備就緒
