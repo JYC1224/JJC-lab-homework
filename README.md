@@ -1286,7 +1286,15 @@ driftfile /var/lib/chrony/drift
 
 允許 192.168.1.0/24 子網的所有主機來連線:allow 192.168.1.0/24     或者只允許單一主機allow 192.168.1.50
 
+??????????????????????????
+
 6-2-3. setup chronyd ntp server deny all host
+
+使用指令vi /etc/chrony.conf進行編輯
+
+使用deny all 或 deny 0.0.0.0/0 來拒絕所有連線
+
+????????如何驗證
 
 6-3-1. use chronyc show time sources
 
