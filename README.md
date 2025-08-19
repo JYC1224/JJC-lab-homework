@@ -1259,6 +1259,23 @@ Host test #設定別名
 
 6-2-1. setup chronyd ntp server (time.google.com, time.hinet.net, time.iis.sinica.edu.tw)
 
+使用指令vi /etc/chrony.conf來編輯 chrony.conf 檔案
+
+找到文件中所有以 pool 或 server 開頭的行，並在它們前面加上 # 來註解掉 
+
+然後，將你想要使用的伺服器新增到文件中 如以下
+
+# Use public NTP servers from Taiwan
+server time.google.com iburst
+server time.hinet.net iburst
+server time.iis.sinica.edu.tw iburst
+
+# The default pool line should be commented out or removed
+# pool 0.pool.ntp.org iburst
+
+# Ensure this line exists to save the clock drift rate
+driftfile /var/lib/chrony/drift
+
 6-2-2. setup chronyd ntp server allow subnet host
 
 6-2-3. setup chronyd ntp server deny all host
