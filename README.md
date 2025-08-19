@@ -1401,11 +1401,47 @@ NIS 需要 RPC (rpcbind) 和 NIS 本身 兩個服務才能運作
 
 7-2-2. setup firewall to allow nis
 
+????????????????不知道是不是這樣
+
+開放 port
+
+sudo firewall-cmd --permanent --add-port=607/tcp
+
+sudo firewall-cmd --permanent --add-port=607/udp
+
+sudo firewall-cmd --reload
+
 7-2-3. check nis port
 
-7-3-1. run getent
+使用指令rpcinfo -p(出現下圖)
+
+<img width="410" height="262" alt="image" src="https://github.com/user-attachments/assets/45466eaf-1e99-4784-94c2-9d3efbfa1a8e" />
+
+| 服務                                  | Program | Port          | 說明                                                                 |
+| ----------------------------------- | ------- | ------------- | ------------------------------------------------------------------ |
+| **portmapper (rpcbind)**            | 100000  | 111 (TCP/UDP) | **RPC 的「黃頁」**，負責告訴 client 各 RPC 服務目前在哪個 port 上。所有 RPC client 會先問它。 |
+| **ypserv** (NIS Server)             | 100004  | 607 (TCP/UDP) | **NIS 主伺服器**，提供帳號、群組等 NIS 資料庫查詢。                                   |
+| **yppasswdd** (NIS Password Daemon) | 100009  | 613 (TCP/UDP) | **NIS 密碼修改服務**，讓用戶能透過 `yppasswd` 指令更新自己的密碼。                        |
+
+7-3-1. run getent?????????
+
+使用指令getent passwd
 
 7-3-2. run ypcat
 
-7-3-3. run ypwhich
+使用指令ypcat passwd????????
 
+7-3-3. run ypwhich????????
+
+使用指令ypwhich
+
+# 8.nfs
+8-1-1. run rpcinfo
+
+8-1-2. install nfs-server
+
+8-1-3. enable and run nfs-server service
+
+8-1-4. setup firewall to allow nis
+
+8-1-5. check nis port
