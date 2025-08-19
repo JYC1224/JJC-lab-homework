@@ -1243,6 +1243,20 @@ Host test #設定別名
 
 6-1-4. check ntp port
 
+使用指令ss -uapn | grep chronyd
+
+-u: 顯示 UDP 連線
+
+-a: 顯示所有連線
+
+-p: 顯示使用該連線的程式名稱
+
+-n: 以數字格式顯示埠號
+
+會出現<img width="931" height="58" alt="image" src="https://github.com/user-attachments/assets/b9879111-f185-4c27-85e1-628fcbfc925f" />
+
+顯示 chronyd 正在監聽 UDP 323 埠
+
 6-2-1. setup chronyd ntp server (time.google.com, time.hinet.net, time.iis.sinica.edu.tw)
 
 6-2-2. setup chronyd ntp server allow subnet host
