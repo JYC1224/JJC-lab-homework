@@ -1276,7 +1276,15 @@ server time.iis.sinica.edu.tw iburst
 # Ensure this line exists to save the clock drift rate
 driftfile /var/lib/chrony/drift
 
+????????????????????????????????????
+
 6-2-2. setup chronyd ntp server allow subnet host
+
+使用指令vi /etc/chrony.conf進行編輯
+
+在檔案裡加入 允許哪些客戶端可以用你的機器做NTP校正時間
+
+允許 192.168.1.0/24 子網的所有主機來連線:allow 192.168.1.0/24     或者只允許單一主機allow 192.168.1.50
 
 6-2-3. setup chronyd ntp server deny all host
 
@@ -1285,4 +1293,3 @@ driftfile /var/lib/chrony/drift
 6-3-2. use chronyc synchronize with time source
 
 6-3-3. use chronyc show how far the system clock
-
