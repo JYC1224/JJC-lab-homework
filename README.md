@@ -1318,4 +1318,30 @@ driftfile /var/lib/chrony/drift
 
 6-3-2. use chronyc synchronize with time source
 
+使用指令chronyc makestep強制 chronyd 立刻把系統時鐘跟時間來源對齊
+
+系統回應200 OK 也就是 chronyd 的回應碼，表示指令已經成功執行
+
 6-3-3. use chronyc show how far the system clock
+
+使用指令chronyc tracking了解系統時鐘與精確時間源之間的詳細差異(如下圖:)
+
+<img width="551" height="280" alt="image" src="https://github.com/user-attachments/assets/0d980023-aef2-419e-8552-40f846d836d8" />
+
+| 欄位名稱                | 範例值                           | 解釋                                                                       |
+| ------------------- | ----------------------------- | ------------------------------------------------------------------------ |
+| **Reference ID**    | `D8EF2308 (time3.google.com)` | 當前同步的上游時間伺服器 ID 與名稱。這裡代表正在跟 Google 的 NTP 伺服器同步。                          |
+| **Stratum**         | `2`                           | 時間源的層級。Stratum 1 = 直接連接原子鐘/GPS，Stratum 2 = 向 Stratum 1 同步，以此類推。值越小精確度越高。 |
+| **Ref time (UTC)**  | `Tue Aug 19 06:38:26 2025`    | 最後一次從時間源接收到的時間（UTC）。                                                     |
+| **System time**     | `0.000001013 seconds fast`    | 系統時間比 NTP 標準時間快了 \~1 微秒（非常準）。                                            |
+| **Last offset**     | `+0.000306891 seconds`        | 最近一次校正時，測得的時間差（約 0.3 毫秒）。                                                |
+| **RMS offset**      | `0.000417445 seconds`         | 時鐘偏差的「均方根值」，反映平均誤差（約 0.4 毫秒）。                                            |
+| **Frequency**       | `10.896 ppm slow`             | 系統時鐘的頻率偏差，每秒慢 \~10.896 微秒。chrony 會調整它來修正漂移。                              |
+| **Residual freq**   | `+0.037 ppm`                  | 剩餘尚未完全修正的頻率誤差（幾乎可以忽略）。                                                   |
+| **Skew**            | `0.686 ppm`                   | 頻率調整值的不確定性範圍，表示 chrony 還有多少「信心」需要觀察時間源來進一步修正。                            |
+| **Root delay**      | `0.006741246 seconds`         | 系統到時間源的網路往返延遲（約 6.7 毫秒）。                                                 |
+| **Root dispersion** | `0.001524317 seconds`         | 時鐘不確定度（約 1.5 毫秒），隨時間會慢慢增加直到下一次校正。                                        |
+| **Update interval** | `516.5 seconds`               | 兩次校正的間隔時間（這裡大約每 8.6 分鐘會向 NTP 伺服器同步一次）。                                   |
+| **Leap status**     | `Normal`                      | 閏秒狀態。`Normal` 代表目前沒有即將插入/刪除閏秒。                                           |
+
+
