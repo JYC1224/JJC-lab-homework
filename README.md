@@ -1438,10 +1438,34 @@ sudo firewall-cmd --reload
 # 8.nfs
 8-1-1. run rpcinfo
 
+使用指令sudo rpcinfo -p來列出目前伺服器上所有的 RPC 服務
+
 8-1-2. install nfs-server
+
+使用指令zypper install nfs-kernel-server來安裝
 
 8-1-3. enable and run nfs-server service
 
-8-1-4. setup firewall to allow nis
+使用指令sudo systemctl start nfs-server
 
-8-1-5. check nis port
+使用指令sudo systemctl enable nfs-server
+
+使用指令sudo systemctl status nfs-server
+
+看到active (exited)表示運行中
+
+8-1-4. setup firewall to allow nfs
+
+NFS 需要開啟以下服務：nfs → NFS 本身/rpc-bind → RPC 綁定器 (portmapper, port 111)/mountd → 負責處理掛載請求
+
+使用指令firewall-cmd --permanent --add-service=nfs新增服務
+
+使用指令firewall-cmd --permanent --add-service=rpc-bind新增服務
+
+使用指令firewall-cmd --permanent --add-service=mountd新增服務
+
+使用指令firewall-cmd --reload重新載入防火牆
+
+使用指令firewall-cmd --list-services確認服務有加進去
+
+8-1-5. check nfs port
