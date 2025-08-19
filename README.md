@@ -1344,4 +1344,48 @@ driftfile /var/lib/chrony/drift
 | **Update interval** | `516.5 seconds`               | 兩次校正的間隔時間（這裡大約每 8.6 分鐘會向 NTP 伺服器同步一次）。                                   |
 | **Leap status**     | `Normal`                      | 閏秒狀態。`Normal` 代表目前沒有即將插入/刪除閏秒。                                           |
 
+# 7.nis
+7-1-1. run rpcinfo
+
+若rpcbind 服務沒有運行則需要先啟動 rpcbind 服務
+
+使用指令systemctl start rpcbind來啟動服務
+
+也能使用指令systemctl enable rpcbind設定開機自啟動
+
+完成後使用指令rpcinfo -p(如下圖:)
+
+<img width="414" height="162" alt="image" src="https://github.com/user-attachments/assets/164bf950-e9cd-446c-b5f6-f9e69151a7ab" />
+
+列出了 RPC 服務的程式編號、版本、協議和埠號
+
+7-1-2. install ypserv
+
+使用指令zypper install ypserv來安裝
+
+7-1-3. enable and run ypserv service
+
+使用指令systemctl start ypserv
+
+使用指令systemctl enable ypserv
+
+使用指令systemctl status ypserv
+
+這樣 ypserv 就會作為 NIS Server 常駐在你的 VM 上
+
+7-1-4. setup firewall to allow nis
+
+7-1-5. check nis port
+
+7-2-1. enable and run yppasswdd service
+
+7-2-2. setup firewall to allow nis
+
+7-2-3. check nis port
+
+7-3-1. run getent
+
+7-3-2. run ypcat
+
+7-3-3. run ypwhich
 
