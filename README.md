@@ -905,9 +905,9 @@ fe80::2 dev eth0 lladdr 52:56:00:00:00:02 router STALE
 
 3-4-6. use sar run queue from the saved data file
 
-使用指令sar -u -f /var/log/sa/sa05
+使用指令sar -u -f /var/log/sa/sa20250722
 
-錯誤
+即可顯示出當天的狀況
 
 
 3-4-7. explain vmstat command all column
@@ -1040,6 +1040,8 @@ fe80::2 dev eth0 lladdr 52:56:00:00:00:02 router STALE
 不知為何一堆no reply
 
 <img width="668" height="682" alt="image" src="https://github.com/user-attachments/assets/63e03985-15ca-4351-b47f-5a05676db391" />
+
+原因:機器太遠了連不上
 
 4-2-1. use ip turn on/off nic
 
