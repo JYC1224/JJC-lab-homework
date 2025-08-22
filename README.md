@@ -1267,15 +1267,15 @@ Host test #設定別名
 
 然後，將你想要使用的伺服器新增到文件中 如以下
 
-# Use public NTP servers from Taiwan
+Use public NTP servers from Taiwan
 server time.google.com iburst
 server time.hinet.net iburst
 server time.iis.sinica.edu.tw iburst
 
-# The default pool line should be commented out or removed
-# pool 0.pool.ntp.org iburst
+The default pool line should be commented out or removed
+pool 0.pool.ntp.org iburst
 
-# Ensure this line exists to save the clock drift rate
+Ensure this line exists to save the clock drift rate
 driftfile /var/lib/chrony/drift
 
 ????????????????????????????????????
