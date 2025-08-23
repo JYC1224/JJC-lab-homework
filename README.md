@@ -1381,7 +1381,7 @@ NIS 需要 RPC (rpcbind) 和 NIS 本身 兩個服務才能運作
 
 使用指令sudo firewall-cmd --permanent --add-service=rpc-bind
 
-使用指令sudo firewall-cmd --permanent --add-service=nis--------->失敗
+使用指令sudo firewall-cmd --permanent --add-service=nis--------->失敗??????????
 
 7-1-5. check nis port
 
@@ -1390,6 +1390,32 @@ NIS 需要 RPC (rpcbind) 和 NIS 本身 兩個服務才能運作
 <img width="333" height="82" alt="image" src="https://github.com/user-attachments/assets/190e1471-62cd-47f3-b0b7-333c3eb1e200" />
 
 這代表 ypserv 用 UDP 607、TCP 607 來監聽
+
+7-1-6. explain /etc/ypserv.conf all parameter
+
+使用指令vi /etc/ypserv.conf
+
+<img width="767" height="929" alt="image" src="https://github.com/user-attachments/assets/fe9e27de-f7bf-416e-b57b-18c522667855" />
+
+files: 30
+
+這個參數設定了 ypserv 在記憶體中快取（cache）的檔案句柄（file handles）數量。快取這些句柄可以提高伺服器的效能，因為它能更快地存取地圖檔案，而不必每次都從頭開啟。這個數值可以根據你的伺服器負載來調整。
+
+xfr_check_port: yes
+
+這個參數是一個重要的安全設定。它會檢查所有來自客戶端要求地圖傳輸 (ypxfr) 的請求，並只允許來自**特權埠（privileged ports）**的連線。特權埠的號碼都小於 1024。因為只有 root 使用者才能使用特權埠，這項設定能防止惡意使用者發起未經授權的地圖傳輸，從而提高安全性。
+
+access:
+access: <主機> : <網域> : <地圖名稱> : <安全層級>
+
+解釋：這是 ypserv.conf 中最重要的部分，它定義了誰可以存取什麼。它的結構非常靈活，允許你設定精細的存取控制規則。ypserv 會從上到下檢查這些規則，一旦匹配到一個，就會停止檢查。
+
+slp: no
+
+這個參數告訴 ypserv 服務不要向 SLP 伺服器註冊自己。
+
+slp_timeout: 3600
+解釋：這個參數定義了 ypserv 服務重新向 SLP 伺服器註冊的時間間隔，單位是秒。
 
 7-2-1. enable and run yppasswdd service
 
