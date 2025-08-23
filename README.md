@@ -1496,7 +1496,7 @@ sudo firewall-cmd --reload
 | **ypserv** (NIS Server)             | 100004  | 607 (TCP/UDP) | **NIS 主伺服器**，提供帳號、群組等 NIS 資料庫查詢。                                   |
 | **yppasswdd** (NIS Password Daemon) | 100009  | 613 (TCP/UDP) | **NIS 密碼修改服務**，讓用戶能透過 `yppasswd` 指令更新自己的密碼。                        |
 
-7-3-1. run getent?????????
+7-3-1. install ypbind service
 
 首先為server進行設定VM1 (NIS Server) 上執行
 
@@ -1504,13 +1504,17 @@ zypper install ypserv yast2-nis-server
 
 yast nis_server
 
-7-3-2. run ypcat
+7-3-2. enable and run ypbind service
 
 使用指令ypcat passwd????????
 
-7-3-3. run ypwhich????????
+7-3-3. run getent
 
 使用指令ypwhich
+
+7-3-4. run ypcat
+
+7-3-5. run ypwhich
 
 # 8.nfs
 8-1-1. run rpcinfo
