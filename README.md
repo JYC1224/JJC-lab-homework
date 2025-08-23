@@ -1379,9 +1379,56 @@ driftfile /var/lib/chrony/drift
 
 NIS 需要 RPC (rpcbind) 和 NIS 本身 兩個服務才能運作 
 
-使用指令sudo firewall-cmd --permanent --add-service=rpc-bind
+### **我們手動建立服務定義**
 
-使用指令sudo firewall-cmd --permanent --add-service=nis--------->失敗??????????
+如果安裝 `ypbind` 還是無法解決問題，那我們就不要依賴套件，直接手動建立 `nis` 服務的定義檔。
+
+**請在你的 NIS 伺服器 (VM1) 上執行以下步驟：**
+
+1.  **進入服務定義資料夾**
+
+    ```bash
+    cd /usr/lib/firewalld/services/
+    ```
+
+2.  **建立 `nis.xml` 檔案**
+    使用 `vi` 或 `nano` 建立一個新檔案，並將以下內容複製貼上。這個檔案會告訴 `firewalld` `nis` 服務的埠號和協定。
+
+    ```bash
+    sudo vi nis.xml
+    ```
+
+    然後將以下內容複製到檔案中：
+
+    ```xml
+    <?xml version="1.0" encoding="utf-8"?>
+    <service>
+      <short>NIS</short>
+      <description>Network Information Service (NIS) is a client-server protocol. All network objects in the NIS maps, such as hosts, users and groups are centrally managed.</description>
+      <port protocol="udp" port="111"/>
+      <port protocol="tcp" port="111"/>
+      <port protocol="udp" port="2000"/>
+      <port protocol="tcp" port="2000"/>
+    </service>
+    ```
+
+      * **注意**：NIS 的動態埠號非常複雜，我們這裡只寫入最常見的 `portmapper` (111) 和 `ypserv` 可能會用到的 `rpc.lockd` (2000)。雖然這樣無法涵蓋所有動態埠，但通常能解決問題。
+
+3.  **重新載入防火牆**
+    讓防火牆讀取這個新的服務定義檔案。
+
+    ```bash
+    sudo firewall-cmd --reload
+    ```
+
+4.  **再次新增 `nis` 服務**
+    現在你的 `firewalld` 應該已經能識別 `nis` 服務了。
+
+    ```bash
+    sudo firewall-cmd --permanent --add-service=nis
+    ```
+
+如果這次依然失敗，請告訴我你使用的是哪一個版本的 SUSE Linux Enterprise Server (SLES) 或 openSUSE。
 
 7-1-5. check nis port
 
@@ -1429,8 +1476,6 @@ slp_timeout: 3600
 
 7-2-2. setup firewall to allow nis
 
-????????????????不知道是不是這樣
-
 開放 port
 
 sudo firewall-cmd --permanent --add-port=607/tcp
@@ -1453,7 +1498,11 @@ sudo firewall-cmd --reload
 
 7-3-1. run getent?????????
 
-使用指令getent passwd
+首先為server進行設定VM1 (NIS Server) 上執行
+
+zypper install ypserv yast2-nis-server
+
+yast nis_server
 
 7-3-2. run ypcat
 
