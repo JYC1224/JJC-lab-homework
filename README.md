@@ -1428,7 +1428,7 @@ NIS 需要 RPC (rpcbind) 和 NIS 本身 兩個服務才能運作
     sudo firewall-cmd --permanent --add-service=nis
     ```
 
-如果這次依然失敗，請告訴我你使用的是哪一個版本的 SUSE Linux Enterprise Server (SLES) 或 openSUSE。
+使用 firewall-cmd --list-services
 
 7-1-5. check nis port
 
@@ -1554,3 +1554,29 @@ NFS 需要開啟以下服務：nfs → NFS 本身/rpc-bind → RPC 綁定器 (po
 使用指令rpcinfo -p看系統有沒有在監聽
 
 nfs 服務會固定在 2049 埠，mountd 則可能使用不同的埠號，只要它們出現在列表中，就表示防火牆已為它們開啟了正確的埠，NFS 服務也已準備就緒
+
+8-1-6. explain /etc/exports all parameter
+
+| 參數                                   | 說明                   |
+| ------------------------------------ | -------------------- |
+| `ro` / `rw`                          | 唯讀 / 可讀寫             |
+| `root_squash`                        | 把 root 映射成匿名 (預設安全)  |
+| `no_root_squash`                     | 保持 root 身份 (高風險)     |
+| `all_squash`                         | 所有使用者都映射成匿名          |
+| `anonuid` / `anongid`                | 設定匿名使用者的 UID/GID     |
+| `sync` / `async`                     | 是否強制同步寫入磁碟           |
+| `secure` / `insecure`                | 是否要求客戶端使用低埠號 (<1024) |
+| `subtree_check` / `no_subtree_check` | 是否檢查子目錄權限            |
+
+
+8-2-1. run showmount to check nfs server device
+
+8-2-2. run mount to mount nfs device
+
+8-2-3. use /etc/fstab and run mount to mount nfs device
+
+8-2-2. run mount to check mount device
+
+8-2-2. run df to check mount device
+
+8-2 run on client
