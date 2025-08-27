@@ -1600,6 +1600,10 @@ Export list for 10.0.2.5:
 
 使用指令sudo mount -t nfs 10.0.2.5:/srv/nfs/shared_data /mnt/nfs_share
 
+Created symlink /run/systemd/system/remote-fs.target.wants/rpc-statd.service → /usr/lib/systemd/system/rpc-statd.service.
+
+mount.nfs: access denied by server while mounting 10.0.2.5:/srv/nfs/shared_data
+
 8-2-3. use /etc/fstab and run mount to mount nfs device
 
 8-2-4. run mount to check mount device
