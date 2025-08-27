@@ -1622,3 +1622,5 @@ mount.nfs: access denied by server while mounting 10.0.2.5:/srv/nfs/shared_data
 
 <img width="1152" height="348" alt="image" src="https://github.com/user-attachments/assets/bd474108-70f4-4049-9ddd-cbb35b2e89f2" />
 
+
+# 9.dhcp
