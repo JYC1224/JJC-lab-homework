@@ -1588,12 +1588,22 @@ nfs 服務會固定在 2049 埠，mountd 則可能使用不同的埠號，只要
 
 在 NFS 客戶端 (VM2) 上使用指令showmount -e 10.0.2.5(NFS_server_IP_address)
 
+顯示:一個列表，顯示伺服器上共享的目錄
+
+Export list for 10.0.2.5:
+
+/data 10.0.2.0/24
+
 8-2-2. run mount to mount nfs device
+
+使用指令client:~ # mkdir -p /mnt/nfs_share(這個掛載點必須是事先建立好的空資料夾)
+
+使用指令sudo mount -t nfs 10.0.2.5:/srv/nfs/shared_data /mnt/nfs_share
 
 8-2-3. use /etc/fstab and run mount to mount nfs device
 
-8-2-2. run mount to check mount device
+8-2-4. run mount to check mount device
 
-8-2-2. run df to check mount device
+8-2-5. run df to check mount device
 
-8-2 run on client
+
