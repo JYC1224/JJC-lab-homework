@@ -1606,8 +1606,19 @@ mount.nfs: access denied by server while mounting 10.0.2.5:/srv/nfs/shared_data
 
 8-2-3. use /etc/fstab and run mount to mount nfs device
 
+使用指令sudo vi /etc/fstab
+
 8-2-4. run mount to check mount device
+
+使用指令mount
+
+看到出現以下這行表示成功
+
+10.0.2.5:/data on /data type nfs4 (rw,relatime,vers=4.2,rsize=524288,wsize=524288,namlen=255,hard,proto=tcp,timeo=600,retrans=2,sec=sys,clientaddr=10.0.2.4,local_lock=none,addr=10.0.2.5)
 
 8-2-5. run df to check mount device
 
+使用指令df -h
+
+<img width="1152" height="348" alt="image" src="https://github.com/user-attachments/assets/bd474108-70f4-4049-9ddd-cbb35b2e89f2" />
 
