@@ -1627,9 +1627,21 @@ mount.nfs: access denied by server while mounting 10.0.2.5:/srv/nfs/shared_data
 
 9-1-1. install dhcp-server yast2-dhcp-server
 
+使用指令sudo zypper install dhcp-server yast2-dhcp-server
+
 9-1-2. enable and run dhcp-server service
 
+使用指令systemctl status dhcpd.service
+
+sudo systemctl enable dhcpd
+
+
+
 9-1-3. setup firewall to allow dhcp
+
+使用指令sudo firewall-cmd --permanent --add-service=dhcp
+
+使用指令sudo firewall-cmd --reload
 
 9-1-4. check dhcp port
 
