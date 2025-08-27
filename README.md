@@ -1624,3 +1624,31 @@ mount.nfs: access denied by server while mounting 10.0.2.5:/srv/nfs/shared_data
 
 
 # 9.dhcp
+
+9-1-1. install dhcp-server yast2-dhcp-server
+
+9-1-2. enable and run dhcp-server service
+
+9-1-3. setup firewall to allow dhcp
+
+9-1-4. check dhcp port
+
+9-1-5. setup floating ip range
+
+9-1-6. setup fixed ip for some mac address
+
+9-1-7. setup route
+
+9-1-8. setup dns
+
+9-1-9. setup tftp
+
+9-1-10. explain /etc/dhcpd.conf
+
+9-2-1. install dhcp-client
+
+9-2-2. get ip
+
+ps 9-1 run on server
+
+9-2 run on client
