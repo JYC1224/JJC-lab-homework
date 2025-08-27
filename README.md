@@ -1498,23 +1498,38 @@ sudo firewall-cmd --reload
 
 7-3-1. install ypbind service
 
-首先為server進行設定VM1 (NIS Server) 上執行
-
-zypper install ypserv yast2-nis-server
-
-yast nis_server
+使用指令sudo zypper install ypbind來安裝
 
 7-3-2. enable and run ypbind service
 
-使用指令ypcat passwd????????
+使用指令sudo systemctl start ypbind
+
+使用指令sudo systemctl enable ypbind
+
+使用指令sudo systemctl status ypbind
 
 7-3-3. run getent
 
-使用指令ypwhich
+使用指令sudo getent passwd
+
+如果 NIS 連線成功，這個指令的輸出將會同時顯示本地使用者和 NIS 伺服器上的使用者列表。這證明你的客戶端已經成功地從 NIS 伺服器獲取了帳號資訊。
+
+<img width="1839" height="574" alt="image" src="https://github.com/user-attachments/assets/4c070fa9-471f-4907-bd30-87efd47a12c2" />
+
 
 7-3-4. run ypcat
 
+使用指令sudo ypcat passwd
+
+這個指令只會列出從 NIS 伺服器上取得的所有使用者帳號。如果能看到列表，表示客戶端與伺服器之間的通訊正常。
+
+<img width="1834" height="114" alt="image" src="https://github.com/user-attachments/assets/2d237b01-77ac-4106-a5a6-ce3de694c90b" />
+
 7-3-5. run ypwhich
+
+使用指令sudo ypwhich
+
+它會顯示你的 NIS 伺服器（VM1）的主機名稱或 IP 位址。如果顯示正確，就表示你的客戶端已成功綁定到 NIS 伺服器。
 
 # 8.nfs
 8-1-1. run rpcinfo
@@ -1570,6 +1585,8 @@ nfs 服務會固定在 2049 埠，mountd 則可能使用不同的埠號，只要
 
 
 8-2-1. run showmount to check nfs server device
+
+在 NFS 客戶端 (VM2) 上使用指令showmount -e 10.0.2.5(NFS_server_IP_address)
 
 8-2-2. run mount to mount nfs device
 
