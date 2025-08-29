@@ -1633,11 +1633,13 @@ mount.nfs: access denied by server while mounting 10.0.2.5:/srv/nfs/shared_data
 
 9-1-2. enable and run dhcp-server service
 
-使用指令systemctl status dhcpd.service
+使用指令sudo systemctl start dhcpd
 
-sudo systemctl enable dhcpd
+使用指令sudo systemctl enable dhcpd
 
-????????????????????????
+使用指令sudo systemctl status dhcpd
+
+看到active (running)表示成功
 
 9-1-3. setup firewall to allow dhcp
 
