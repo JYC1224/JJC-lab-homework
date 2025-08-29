@@ -1649,7 +1649,15 @@ mount.nfs: access denied by server while mounting 10.0.2.5:/srv/nfs/shared_data
 
 9-1-4. check dhcp port
 
+使用指令sudo ss -upln | grep dhcp
+
+<img width="1179" height="70" alt="image" src="https://github.com/user-attachments/assets/4ae7c0ba-978c-492c-80ea-aed2b303da7a" />
+
+UNCONN???
+
 9-1-5. setup floating ip range
+
+
 
 9-1-6. setup fixed ip for some mac address
 
