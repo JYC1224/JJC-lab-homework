@@ -1676,3 +1676,42 @@ UNCONN???
 ps 9-1 run on server
 
 9-2 run on client
+
+# 10.dns
+10-1-1. install bind yast2-dns-server
+
+
+
+10-1-2. enable and run named service
+
+10-1-3. setup firewall to allow dns
+
+10-1-4. check dns port
+
+10-1-5. usenamed-checkconf to check config
+
+10-1-6. usenamed-checkzone to check config
+
+10-1-7. setup global forward
+
+10-1-8. setup zone forward
+
+10-1-9. setup A (Address record) in zone file and explain
+
+10-1-10. setup NS (Name Server record) in zone file and explain
+
+10-1-11. setup CNAME (Canonical Name record) in zone file and explain
+
+10-1-12. setup PTR (PoinTer record) in zone file and explain
+
+10-1-13. setup MX (Mail eXchanger record) in zone file and explain
+
+10-1-14. setup AAAA (Quad-A record) in zone file and explain
+
+10-1-15. setup TXT (Text record) in zone file and explain
+
+10-2-1. setup dns
+
+10-2-1. use dig to check
+
+10-2-1. use nslockup
