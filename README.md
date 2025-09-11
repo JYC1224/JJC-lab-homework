@@ -1680,11 +1680,31 @@ ps 9-1 run on server
 # 10.dns
 10-1-1. install bind yast2-dns-server
 
+使用指令sudo zypper refresh
 
+使用指令sudo zypper -n install bind yast2-dns-server安裝
+
+使用指令rpm -q bind yast2-dns-server確認已安裝
 
 10-1-2. enable and run named service
 
+使用指令sudo systemctl enable --now named啟用並立刻啟動
+
+使用指令sudo systemctl status named --no-pager檢查狀態
+
+使用指令sudo firewall-cmd --permanent --zone=internal --add-service=dns
+
+使用指令sudo firewall-cmd --reload
+
 10-1-3. setup firewall to allow dns
+
+使用指令sudo firewall-cmd --get-active-zones來確認介面在哪個 zone
+
+使用指令sudo firewall-cmd --permanent --zone=internal --add-service=dns允許 DNS 服務
+
+使用指令sudo firewall-cmd –reload
+
+使用指令sudo firewall-cmd --zone=internal --list-services | grep dns驗證
 
 10-1-4. check dns port
 
