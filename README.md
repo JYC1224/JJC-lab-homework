@@ -1743,6 +1743,20 @@ forward first;
 
 10-1-8. setup zone forward
 
+使用指令yast dns-server設定DNS Zones
+
+Add 新增一個 Type: Forward 的 zone（例如 opensuse.org）
+
+進入該 zone 的設定頁，填 Forwarders(ex:1.1.1.1)
+
+確認 Reload 與 Start on boot並勾 Open Port in Firewall
+
+使用指令dig @10.0.2.5 www.opensuse.org檢驗
+
+<img width="865" height="495" alt="image" src="https://github.com/user-attachments/assets/1e425a3b-cb58-4c62-bb38-25486d9aec68" />
+
+???????????????????????
+
 10-1-9. setup A (Address record) in zone file and explain
 
 10-1-10. setup NS (Name Server record) in zone file and explain
