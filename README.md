@@ -1801,7 +1801,29 @@ Value：pc1.example.com. ← 尾端要有點號
 
 10-1-13. setup MX (Mail eXchanger record) in zone file and explain
 
+MX 記錄是什麼
+
+用途：指定「寄到 @example.com 的郵件要交給哪台郵件主機」。
+
+格式：<zone> IN MX <優先序> <郵件主機名>.（數字越小優先度越高，可多筆 10/20 做主備）。
+
+注意：MX 指向的 郵件主機名必須能解析（要有 A/AAAA），不能是 CNAME；每次改區檔要遞增 SOA serial。
+
 10-1-14. setup AAAA (Quad-A record) in zone file and explain
+
+AAAA 是什麼
+
+用途：把主機名對應到 IPv6 位址（就像 A 記錄對應到 IPv4）。
+
+格式：<name> IN AAAA <IPv6-address>。
+
+注意：
+
+IPv6 可用縮寫（如 2001:db8::11），但要確定是真實可用的位址。
+
+就算 named 沒開 IPv6 監聽（例如 listen-on-v6 { none; };），照樣能透過 IPv4 回覆 AAAA 記錄；只影響傳輸協定，不影響記錄內容。
+
+每次改區檔記得遞增 SOA serial，不然新紀錄不會生效。
 
 10-1-15. setup TXT (Text record) in zone file and explain
 
