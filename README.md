@@ -1807,6 +1807,24 @@ Value：pc1.example.com. ← 尾端要有點號
 
 10-2-1. setup dns
 
-10-2-1. use dig to check
+使用指令sudo vi /etc/resolv.conf 編輯檔案
 
-10-2-1. use nslockup
+加入nameserver 參數，後面跟著你想要使用的 DNS 伺服器 IP
+
+nameserver 8.8.8.8
+
+nameserver 8.8.4.4
+
+10-2-2. use dig to check
+
+使用指令dig www.google.com
+
+<img width="620" height="383" alt="image" src="https://github.com/user-attachments/assets/db229ed4-443b-4654-9252-17a3f2547043" />
+
+
+10-2-3. use nslockup
+
+使用指令nslookup www.google.com
+
+<img width="317" height="183" alt="image" src="https://github.com/user-attachments/assets/d07cbc70-5ee5-44a1-9d1e-e77c3a818426" />
+
