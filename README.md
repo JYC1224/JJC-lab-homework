@@ -1708,11 +1708,38 @@ ps 9-1 run on server
 
 10-1-4. check dns port
 
+使用指令sudo ss -ltnp | grep ':53' 檢查 named 是否監聽 53(TCP)
+
+使用指令sudo ss -lunp | grep ':53' 檢查 named 是否監聽 53(UDP)
+
+使用指令sudo systemctl status named --no-pager看服務狀態
+
 10-1-5. usenamed-checkconf to check config
+
+使用指令sudo named-checkconf /etc/named.conf && echo "named.conf OK"檢查 named 主設定檔語法
+
+使用指令sudo named-checkconf -z /etc/named.conf進一步：同時嘗試載入所有 zone（可抓出路徑/權限/語法問題）若沒有輸出或回傳 0 代表 OK；有問題會列出行號與錯誤訊息。
+
+<img width="865" height="111" alt="image" src="https://github.com/user-attachments/assets/19f8e7ed-5730-4146-a012-8be5168533c1" />
+
 
 10-1-6. usenamed-checkzone to check config
 
+
+
 10-1-7. setup global forward
+
+使用指令vi /etc/named.conf編輯
+
+options { } 內加入全域轉遞設定(在option區最後加入以下兩行)
+
+forwarders { 1.1.1.1; 8.8.8.8; };
+
+forward first;
+
+使用指令named-checkconf
+
+使用指令systemctl reload named
 
 10-1-8. setup zone forward
 
