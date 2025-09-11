@@ -1761,9 +1761,43 @@ Add 新增一個 Type: Forward 的 zone（例如 opensuse.org）
 
 10-1-10. setup NS (Name Server record) in zone file and explain
 
+使用指令yast dns-server並選擇DNS Zones
+
+選example.com → Edit → NS Records
+
+新增example.com.
+
+使用指令dig @<你的DNS_IP> NS example.com +noall +answer檢驗
+
+<img width="778" height="53" alt="image" src="https://github.com/user-attachments/assets/9de58008-075c-42b1-be26-2d1378a32f8e" />
+
 10-1-11. setup CNAME (Canonical Name record) in zone file and explain
 
+使用指令yast dns-server並選擇DNS Zones
+
+在下方列表選 example.com → 右側 Edit。
+
+進入後選 Records（或 Resource Records）→ Add
+
+Record Type 選 CNAME，填：
+
+Record Key：www（代表 www.example.com.）
+
+Value：pc1.example.com. ← 尾端要有點號
+
 10-1-12. setup PTR (PoinTer record) in zone file and explain
+
+使用指令vi /var/lib/named/master/0.168.192.in-addr.arpa編輯
+
+<img width="865" height="151" alt="image" src="https://github.com/user-attachments/assets/53461631-fd57-4ac3-9c26-5e39fed07e6f" />
+
+使用指令chown -R named:named /var/lib/named
+
+使用指令named-checkzone 0.168.192.in-addr.arpa /var/lib/named/master/0.168.192.in-addr.arpa
+
+使用指令dig @<你的DNS_IP> -x 192.168.0.11 +noall +answer驗證
+
+回pc1.example.com.表示成功
 
 10-1-13. setup MX (Mail eXchanger record) in zone file and explain
 
