@@ -1686,7 +1686,24 @@ subnet 10.0.2.0 netmask 255.255.255.0 {
 
 9-1-7. setup route
 
+使用指令sudo vi /etc/dhcpd.conf編輯設定檔
+
+subnet 10.0.2.0 netmask 255.255.255.0 {
+  range 10.0.2.101 10.0.2.150;
+  option routers 10.0.2.1;
+  host server1 {
+    hardware ethernet 08:00:27:11:22:33;
+    fixed-address 10.0.2.200;
+  }
+}
+
+使用指令sudo systemctl restart dhcpd重新啟動服務
+
 9-1-8. setup dns
+
+使用指令sudo vi /etc/dhcpd.conf編輯設定檔
+
+加入option domain-name-servers 10.0.2.1設定路由器的 IP 位址
 
 9-1-9. setup tftp
 
