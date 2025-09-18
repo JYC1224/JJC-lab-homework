@@ -1707,6 +1707,37 @@ subnet 10.0.2.0 netmask 255.255.255.0 {
 
 9-1-9. setup tftp
 
+使用指令sudo vi /etc/dhcpd.conf編輯設定檔
+
+先加入: next-server <tftp_server_IP_address>;(DHCP server本身的 IP 位址)
+
+再加入filename "pxelinux.0";
+
+使用指令sudo systemctl restart dhcpd套用新設定
+
+9-1-10. explain /etc/dhcpd.conf
+
+DHCP 伺服器的主設定檔。決定要發哪些 IP、租約時間、預設閘道與 DNS 等。
+
+基本結構
+
+1.全域參數：預設租約、網域、DNS。
+
+2.subnet {}：針對某個網段的發放規則。
+
+3.進階選用：pool {} 分組條件、host {} 綁 MAC 發固定 IP、PXE 等。
+
+| 指令／區塊                        | 意義／用途                    | 範例                                                                            |
+| ---------------------------- | ------------------------ | ----------------------------------------------------------------------------- |
+| `default-lease-time`         | 客戶端拿到 IP 的預設有效時間（秒）      | `default-lease-time 600;`                                                     |
+| `max-lease-time`             | 可給的最長租約時間（秒）             | `max-lease-time 7200;`                                                        |
+| `authoritative`              | 避免客戶端持有舊租約一直等待，宣告本伺服器為權威 | `authoritative;`                                                              |
+| `option domain-name-servers` | 下發給客戶端的 DNS 清單           | `option domain-name-servers 10.10.0.1, 1.1.1.1;`                              |
+| `range`                      | 可動態分配的 IP 範圍             | `range 10.10.0.100 10.10.0.200;`                                              |
+| `option routers`             | 預設閘道（Default Gateway）    | `option routers 10.10.0.1;`                                                   |
+| `host … fixed-address`       | 依特定 MAC 固定配同一個 IP        | `host vm2 { hardware ethernet 08:00:27:aa:bb:cc; fixed-address 10.10.0.20; }` |
+
+
 9-1-10. explain /etc/dhcpd.conf
 
 9-2-1. install dhcp-client
