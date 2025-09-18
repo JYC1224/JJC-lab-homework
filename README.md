@@ -1740,13 +1740,51 @@ DHCP 伺服器的主設定檔。決定要發哪些 IP、租約時間、預設閘
 
 9-1-10. explain /etc/dhcpd.conf
 
+DHCP 伺服器（dhcpd）的主設定檔：決定發哪些 IP、租約時間、預設閘道、DNS、PXE等。
+設定優先順序：host ＞ pool ＞ subnet ＞ 全域。
+
+1.全域參數：預設租約、網域、DNS…
+
+2.subnet { … }：某網段的位址池與選項（routers、broadcast…）。
+
+3.(選用）pool { … }、host { … }、class/shared-network：細分規則、綁固定 IP、分群、同 L2 多網段。
+
+| 指令／區塊                        | 意義／用途                   |
+| ---------------------------- | ----------------------- |
+| `default-lease-time`         | 預設租約時間（秒）               |
+| `max-lease-time`             | 允許的最長租約時間（秒）            |
+| `authoritative`              | 宣告本伺服器為該網段的權威來源         |
+| `option domain-name`         | 指定客戶端使用的網域名稱            |
+| `option domain-name-servers` | 指定下發給客戶端的 DNS 伺服器       |
+| `option routers`             | 指定預設閘道（Default Gateway） |
+| `option broadcast-address`   | 指定廣播位址                  |
+| `range`                      | 設定可動態分配的 IP 範圍          |
+| `subnet {}`                  | 定義單一子網的發放規則與選項          |
+| `pool {}`                    | 在同一子網內細分位址池／套用允許條件      |
+| `allow/deny known-clients`   | 允許／拒絕已註冊（有 host 區塊）的客戶端 |
+| `host {}`                    | 針對特定主機的設定（常用於固定 IP）     |
+| `hardware ethernet`          | 在 `host` 內指定主機的 MAC 位址  |
+| `fixed-address`              | 在 `host` 內指定固定發放的 IP    |
+| `class {}`                   | 依客戶端特徵分群（PXE 等）         |
+| `filename`                   | 指定 PXE 開機檔名             |
+| `next-server`                | 指定提供開機檔的 TFTP 伺服器       |
+| `shared-network {}`          | 同一 L2 內的多個子網集合          |
+| `include`                    | 匯入其他設定檔                 |
+| `ddns-update-style`          | 動態 DNS 更新模式             |
+| `failover peer {}`           | DHCP 主從備援設定             |
+
+
 9-2-1. install dhcp-client
+
+使用指令sudo zypper refresh
+
+使用指令sudo zypper -n install dhcp-client
+
+使用指令rpm -q dhcp-client確認已安裝
 
 9-2-2. get ip
 
-ps 9-1 run on server
-
-9-2 run on client
+??????????
 
 # 10.dns
 10-1-1. install bind yast2-dns-server
