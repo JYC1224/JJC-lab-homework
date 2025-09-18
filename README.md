@@ -1959,3 +1959,22 @@ nameserver 8.8.4.4
 
 <img width="317" height="183" alt="image" src="https://github.com/user-attachments/assets/d07cbc70-5ee5-44a1-9d1e-e77c3a818426" />
 
+# 11.web
+
+11-1-1. install apache2 apache2-prefork yast2-http-server
+
+11-1-2. enable and run httpd service
+
+11-1-3. setup firewall to allow http
+
+11-1-4. check http port
+
+11-1-5. use apache2ctl to check config
+
+11-1-6. setup simple web page
+
+11-1-7. setup directory listing / indexing
+
+11-2-1. use browser to link
+
+11-2-2. use curl to link
