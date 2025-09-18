@@ -1657,9 +1657,32 @@ UNCONN???
 
 9-1-5. setup floating ip range
 
+使用指令sudo vi /etc/dhcpd.conf編輯設定檔
 
+新增一個 subnet(如以下)
+
+subnet 10.0.2.0 netmask 255.255.255.0 {
+  range 10.0.2.101 10.0.2.150;
+}
+
+使用指令sudo systemctl restart dhcpd重新啟動服務
 
 9-1-6. setup fixed ip for some mac address
+
+使用指令sudo vi /etc/dhcpd.conf編輯設定檔
+
+在 subnet 區塊中，新增一個 host 宣告。
+
+subnet 10.0.2.0 netmask 255.255.255.0 {
+  range 10.0.2.101 10.0.2.150;
+
+  host server1 {
+    hardware ethernet 08:00:27:11:22:33;
+    fixed-address 10.0.2.200;
+  }
+}
+
+使用指令sudo systemctl restart dhcpd重新啟動服務
 
 9-1-7. setup route
 
