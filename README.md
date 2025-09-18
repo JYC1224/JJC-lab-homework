@@ -1963,15 +1963,45 @@ nameserver 8.8.4.4
 
 11-1-1. install apache2 apache2-prefork yast2-http-server
 
+使用指令sudo zypper install apache2 apache2-prefork yast2-http-server安裝
+
 11-1-2. enable and run httpd service
+
+使用指令sudo systemctl start apache2啟動 apache2 服務
+
+使用指令sudo systemctl enable apache2設定開機自動啟動
+
+使用指令sudo systemctl status apache2檢查服務狀態
+
+如果服務成功啟動，你會看到 active (running) 的狀態
 
 11-1-3. setup firewall to allow http
 
+使用指令sudo firewall-cmd --permanent --add-service=http允許 HTTP (80 埠) 服務
+
+使用指令sudo firewall-cmd --permanent --add-service=https允許 HTTPS (443 埠) 服務
+
+使用指令sudo firewall-cmd --reload重新載入防火牆規則以套用變更
+
+使用指令firewall-cmd --list-services確認服務有加進去
+
 11-1-4. check http port
+
+使用指令sudo ss -tpln | grep http
+
+ <img width="865" height="34" alt="image" src="https://github.com/user-attachments/assets/16d8fb8c-1997-46c4-9e40-ddc3d6b1aee4" />
+
+
+•  LISTEN: 表示服務正在監聽連線。
+•  *:80: 這表示伺服器正在監聽所有網路介面上的 80 埠。
 
 11-1-5. use apache2ctl to check config
 
+ apache2ctl不能用???????????????????
+
 11-1-6. setup simple web page
+
+???????????????????????????
 
 11-1-7. setup directory listing / indexing
 
