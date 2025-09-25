@@ -2031,6 +2031,26 @@ nameserver 8.8.4.4
 
 如果連線成功，curl 會直接在終端機中顯示伺服器網頁的 HTML 內容
 
+# 12.ftp
+12-1-1. install vsftpd yast2-ftp-server
+
+12-1-2. enable and run vsftpd service
+
+12-1-3. setup firewall to allow ftp
+
+12-1-4. check ftp port
+
+12-1-4. explain Control Port and Passive Mode
+
+12-1-5. explain Active Mode and Passive Mode
+
+12-1-6. setup allow anonymous login
+
+12-1-6. setup disable anonymous login
+
+12-1-7. check ftp port
+
+12-2-1. use ftp to connect
 
 # 15.munge
 15-1-1. install munge
