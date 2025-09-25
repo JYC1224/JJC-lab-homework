@@ -1997,14 +1997,32 @@ nameserver 8.8.4.4
 
 11-1-5. use apache2ctl to check config
 
- apache2ctl不能用???????????????????
+使用指令apache2ctl -t語法檢查 OK: 顯示 "Syntax OK"
+
+使用指令apache2ctl configtest同上別名
+
+使用指令apache2ctl -S顯示 vhost 佈局/主機名/檔案來源
+
+使用指令apache2ctl -M列出已載入模組
 
 11-1-6. setup simple web page
 
-???????????????????????????
+使用指令cd /srv/www/htdocs/進入 Apache 的文件根目錄
+
+使用指令sudo vi index.html並建立一個名為 index.html 的檔案
+
+在 index.html 檔案中，新增一個簡單的 HTML 內容
+
+<img width="367" height="232" alt="image" src="https://github.com/user-attachments/assets/c247436c-a207-42aa-9aec-714cd03c8324" />
+
+儲存並退出
 
 11-1-7. setup directory listing / indexing
 
 11-2-1. use browser to link
+
+使用指令zypper in w3m安裝
+
+使用指令w3m  http://<server-ip>/連到你的網站
 
 11-2-2. use curl to link
