@@ -2031,3 +2031,23 @@ nameserver 8.8.4.4
 
 如果連線成功，curl 會直接在終端機中顯示伺服器網頁的 HTML 內容
 
+
+# 15.munge
+15-1-1. install munge
+
+使用指令zypper in munge安裝
+
+15-1-2. enable and run munge service
+
+15-1-3. setup secret key
+
+15-2-1. install munge
+
+15-2-2. setup secret key
+
+15-2-3. use unmunge to check
+
+使用指令munge -n | unmunge本機回圈測試
+
+<img width="568" height="277" alt="image" src="https://github.com/user-attachments/assets/bb4db38b-2d97-4ab4-9986-5b1fc84c912f" />
+
