@@ -2043,7 +2043,17 @@ nameserver 8.8.4.4
 
 15-2-1. install munge
 
+使用指令zypper in munge安裝
+
 15-2-2. setup secret key
+
+scp root@<server-ip>:/etc/munge/munge.key /etc/munge/
+
+chown munge:munge /etc/munge/munge.key
+
+chmod 400 /etc/munge/munge.key
+
+systemctl enable --now munge.service
 
 15-2-3. use unmunge to check
 
