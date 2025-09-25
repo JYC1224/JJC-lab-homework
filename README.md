@@ -2039,7 +2039,23 @@ nameserver 8.8.4.4
 
 15-1-2. enable and run munge service
 
+使用指令systemctl start munge.service
+
+使用指令systemctl enable munge.service
+
+使用指令systemctl status munge.service查看狀態
+
 15-1-3. setup secret key
+
+使用指令chown munge:munge /etc/munge/munge.key把密鑰檔的擁有者/群組改成 munge，讓 MUNGE 服務能安全讀取
+
+使用指令chmod 400 /etc/munge/munge.key將密鑰檔權限設為 唯讀（僅擁有者可讀），避免其他帳號存取；不這樣做 MUNGE 可能拒用此檔。
+
+使用指令systemctl enable --now munge.service立即啟動 MUNGE 並設為開機自動啟動
+
+使用指令munge -n | unmunge本機自測應有輸出
+
+<img width="865" height="423" alt="image" src="https://github.com/user-attachments/assets/be50d81e-753b-41f4-82a7-d13b412eda71" />
 
 15-2-1. install munge
 
