@@ -2026,3 +2026,8 @@ nameserver 8.8.4.4
 使用指令w3m  http://<server-ip>/連到你的網站
 
 11-2-2. use curl to link
+
+使用指令curl http://10.0.2.5
+
+如果連線成功，curl 會直接在終端機中顯示伺服器網頁的 HTML 內容
+
