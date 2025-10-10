@@ -2114,11 +2114,41 @@ Remote Control
 
 1-1-1. install genders
 
+使用指令zypper in -y genders來安裝
+
 1-1-2. setting node attribute (ie: cpus, gpus, ram …)
+
+使用指令vi /etc/genders編輯設定檔
+
+例:加入以下設定
+
+node001   login,client,cpus=4,gpus=0,ram=8G
+
+node002   login,client,cpus=8,gpus=0,ram=16G
+
+node003   mgmt,cpus=4,gpus=0,ram=8G
+
+node00[4-9] compute,backend,cpus=4,gpus=0,ram=8G
+
+使用指令nodeattr -k來看有哪些屬性鍵
+
+使用指令nodeattr -l列全部節點
+
+使用指令nodeattr -c client哪些節點有 client 標籤
+
+使用指令nodeattr -q backendPDSH 可用的壓縮格式
 
 1-2-1. install pdsh
 
+使用指令zypper in -y pdsh pdsh-genders來安裝
+
+使用指令ssh-copy-id <user>@node001依實際節點逐一發佈????????????
+
 1-2-2. use pdsh to shutdown client / backend
+
+使用指令pdsh -R ssh -g client  'sudo /sbin/shutdown -h now'關機所有 client 節點
+
+使用指令pdsh -R ssh -g backend 'sudo /sbin/shutdown -h now'關機所有 backend 節點
 
 Queuing System
 
