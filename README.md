@@ -2097,3 +2097,71 @@ systemctl enable --now munge.service
 
 <img width="568" height="277" alt="image" src="https://github.com/user-attachments/assets/bb4db38b-2d97-4ab4-9986-5b1fc84c912f" />
 
+pxe
+
+16-1-1. setup pxe (isc-dhcp, tftp, http)
+
+
+
+16-1-2. setup pxe (isc-dhcp, tftp, nfs)
+
+16-1-3. setup pxe (isc-dhcp, tftp, ftp)
+
+
+# PART III
+
+Remote Control
+
+1-1-1. install genders
+
+1-1-2. setting node attribute (ie: cpus, gpus, ram …)
+
+1-2-1. install pdsh
+
+1-2-2. use pdsh to shutdown client / backend
+
+Queuing System
+
+2-1-1. install slurm (server & client)
+
+2-1-2. submit slurm job
+
+2-2-1. add slurmdbd
+
+2-2-2. setup qos
+
+Environment Modules
+
+3-1-1. install lmod
+
+3-1-2. add application lua-based modulefile
+
+3-1-3. add application tcl-based modulefile
+
+Compiler
+
+4-1-1. install Intel oneAPI HPC toolkit (Fortrain, C/C++, MKL)
+
+4-1-2. create Intel oneAPI HPC toolkit modulefile
+
+4-2-1. install NVIDIA HPC SDK (Fortran, C/C++)
+
+4-2-2. create NVIDIA HPC SDK modulefile
+
+Chemistry Computer Software
+
+5-1-1. compile VASP
+
+5-1-2. run VASP
+
+5-1-3. run VASP with MPI
+
+5-1-4. run VASP on SLURM
+
+5-1-5. run VASP with MPI on SLURM
+
+5-2-1. compile Gaussian
+
+5-2-2. run Gaussian
+
+5-2-3. run Gaussian on SLURM
