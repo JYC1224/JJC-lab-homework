@@ -2154,7 +2154,39 @@ Queuing System
 
 2-1-1. install slurm (server & client)
 
+使用指令zypper in -y slurm安裝Slurm 佇列系統作業
+
+使用指令mkdir -p /var/lib/slurm /var/spool/slurm /var/log/slurm建目錄與權限
+
+使用指令chown -R slurm:slurm /var/lib/slurm /var/spool/slurm /var/log/slurm建目錄與權限
+
+使用指令chmod 755 /var/log/slurm建目錄與權限
+
+使用指令firewall-cmd --permanent --add-port=6817-6819/tcp開啟防火牆
+
+使用指令firewall-cmd --reload
+
+使用指令systemctl enable --now slurmctld開啟
+
+使用指令systemctl status slurmctld --no-pager
+
+顯示active(running)表示成功
+
+<img width="1386" height="477" alt="image" src="https://github.com/user-attachments/assets/dbc883fa-207e-4a87-9792-a97f6a0ba837" />
+
+但是
+
+<img width="922" height="184" alt="image" src="https://github.com/user-attachments/assets/159c5780-16dc-4e9c-b0dd-6d2a86e5d4ae" />
+
+
+
 2-1-2. submit slurm job
+
+使用指令sinfo -Nla看節點狀態
+
+使用指令srun -p normal -N1 -c1 /bin/hostname單次互動測試：跑在 1 個節點、1 顆 CPU，顯示執行主機名
+
+使用指令srun -p normal -N1 -c1 --pty /bin/bash開一個互動殼層（離開用 exit）
 
 2-2-1. add slurmdbd
 
