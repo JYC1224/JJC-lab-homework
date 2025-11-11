@@ -2110,7 +2110,7 @@ pxe
 
 # PART III
 
-Remote Control
+# Remote Control
 
 1-1-1. install genders
 
@@ -2150,7 +2150,7 @@ node00[4-9] compute,backend,cpus=4,gpus=0,ram=8G
 
 使用指令pdsh -R ssh -g backend 'sudo /sbin/shutdown -h now'關機所有 backend 節點
 
-Queuing System
+# Queuing System
 
 2-1-1. install slurm (server & client)
 
