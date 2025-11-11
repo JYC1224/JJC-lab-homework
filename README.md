@@ -2204,11 +2204,67 @@ Compiler
 
 4-1-1. install Intel oneAPI HPC toolkit (Fortrain, C/C++, MKL)
 
+下載安裝檔 並掛載進共享資料夾
+
+使用指令sh intel-oneapi-hpc-toolkit-<yyyy>.<m>.<xxx>_offline.sh安裝
+
+使用指令cd /opt/intel/oneapi進入資料夾
+
+使用指令ls查看內容
+
+使用指令source /opt/intel/oneapi/setvars.sh啟用環境變數
+
+使用指令which ifx,which icx,which icpx驗證各語言編譯器是否成功
+
+<img width="1737" height="800" alt="image" src="https://github.com/user-attachments/assets/6fb49779-f6b8-4249-a683-82182034066e" />
+
+
 4-1-2. create Intel oneAPI HPC toolkit modulefile
+
+使用指令mkdir -p /usr/share/modules/modulefiles/intel-oneapi建立模組目錄
+
+使用指令cd /usr/share/modules/modulefiles/intel-oneapi進入模組目錄
+
+使用指令vi hpc編輯文字檔 寫入以下文字
+
+<img width="1024" height="327" alt="image" src="https://github.com/user-attachments/assets/85cd0a54-58dc-489c-a52d-703d2f69dc92" />
+
+使用指令sudo mkdir -p /opt/modulefiles/intel-oneapi建立模組文件存放目錄
+
+使用指令sudo vi /opt/modulefiles/intel-oneapi/hpc.lua編輯文字檔
+
+<img width="691" height="499" alt="image" src="https://github.com/user-attachments/assets/eba2afc2-8bd8-40c9-98a0-84803f38d019" />
+
+使用指令source /etc/profile.d/lmod.sh讓 Lmod 知道新的模組路徑
+
+使用指令module use /opt/modulefiles讓 Lmod 知道新的模組路徑
+
+使用指令module avail確認模組是否已加載
+
+<img width="1136" height="304" alt="image" src="https://github.com/user-attachments/assets/ba7b458b-0387-4d75-8060-2ff7bc213985" />
+
+使用指令module load intel-oneapi/hpc加載模組
+
+使用指令which icx,which ifx 都失效
+
+???????????????????????????????????
+
 
 4-2-1. install NVIDIA HPC SDK (Fortran, C/C++)
 
+下載 NVIDIA HPC SDK後
+
+使用指令tar zxf nvhpc_2025_257_Linux_x86_64_cuda_12.9.tar.gz解壓安裝包
+
+使用指令cd nvhpc_2025_257_Linux_x86_64_cuda_12.9執行安裝
+
+使用指令sudo ./install執行安裝
+
 4-2-2. create NVIDIA HPC SDK modulefile
+
+使用指令sudo mkdir -p /opt/modulefiles/nvhpc創建 modulefile 目錄
+
+使用指令sudo vi /opt/modulefiles/nvhpc用 vi 創建 modulefile ????????????????
 
 Chemistry Computer Software
 
