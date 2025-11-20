@@ -2283,6 +2283,11 @@ Chemistry Computer Software
 
 使用指令vi vsub632來編輯該指令
 
+將source來源改掉
+
+<img width="796" height="253" alt="image" src="https://github.com/user-attachments/assets/dba04d18-7b18-4377-a22c-5b509b26e7e7" />
+
+
 5-1-2. run VASP
 
 5-1-3. run VASP with MPI
