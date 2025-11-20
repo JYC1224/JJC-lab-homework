@@ -2266,9 +2266,22 @@ Environment Modules
 
 使用指令sudo vi /opt/modulefiles/nvhpc用 vi 創建 modulefile ????????????????
 
+
 Chemistry Computer Software
 
 5-1-1. compile VASP
+
+用在國3編譯當作示範
+
+將檔案裝在國3之後即可開始編譯
+
+使用指令進入老師的資料夾cd /home/j14jjc00/pkg/vasp_2023 查看裡面各種不同VASP版本之source code
+
+使用指令進入老師的bin cd /home/j14jjc00/bin確認bin的位置
+
+使用指令cd /home/kenway1224/bin 並使用指令cp /home/j14jjc00/bin/vsub641 ./vsub632老師的bin當中的vsub641複製到自己的bin裡面
+
+使用指令vi vsub632來編輯該指令
 
 5-1-2. run VASP
 
