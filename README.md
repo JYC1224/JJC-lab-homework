@@ -2271,6 +2271,32 @@ Chemistry Computer Software
 
 5-1-1. compile VASP
 
+從官網取得原始碼並解壓縮
+
+使用指令tar zxf vasp.6.4.1.tgz在工作目錄解壓
+
+接著準備編譯環境
+
+計算節點或登入節點載入編譯工具與函式庫如:Intel oneAPI：Fortran/C 編譯器（ifx/icx）、Intel MPI、MKL
+
+接著設定 makefile.include
+
+使用指令make std -j N編譯標準版 vasp_std
+
+編譯完成後，執行檔會出現在 bin/ 目錄，例如vasp_std。
+
+接著簡單測試執行
+
+使用指令cd vasp.6.4.1
+
+使用指令export OMP_NUM_THREADS=1
+
+使用指令mpirun -np 2 ./bin/vasp_std | head -n 40
+
+若能印出 VASP 版本與編譯資訊，且沒有立即錯誤，即表示編譯大致成功
+
+接著進入到寫script的部分
+
 用在國3編譯當作示範
 
 將檔案裝在國3之後即可開始編譯
@@ -2289,6 +2315,8 @@ Chemistry Computer Software
 
 
 5-1-2. run VASP
+
+
 
 5-1-3. run VASP with MPI
 
